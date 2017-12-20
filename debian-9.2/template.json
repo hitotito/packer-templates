@@ -1,13 +1,13 @@
 {
     "variables": {
-        "core": "1",
+        "core": "2",
         "memory": "2048",
         "disk_size": "40140",
         "ssh_port": "22",
         "ssh_wait_timeout": "10000s",
-        "iso_url": "http://cdimage.debian.org/cdimage/stretch_di_rc3/amd64/iso-cd/debian-stretch-DI-rc3-amd64-netinst.iso",
-        "iso_md5": "f89c0b952e2a8dc07d23f2377ead4685",
-        "vm_name": "debian-90-rc3-stretch"
+        "iso_url": "https://cdimage.debian.org/cdimage/archive/9.2.0/amd64/iso-cd/debian-9.2.0-amd64-netinst.iso",
+        "iso_md5": "fdf1905e3fa321e0b930e47bcbc4d1e2",
+        "vm_name": "debian-9-2-stretch"
     },
     "builders": [
         {
@@ -51,7 +51,7 @@
             "type": "vagrant",
             "override": {
                 "virtualbox": {
-                    "output": "debian-9-0-0-rc3-virtualbox.box"
+                    "output": "{{user `vm_name`}}.box"
                 }
             }
         }
@@ -66,6 +66,7 @@
                         "scripts/base.sh",
                         "scripts/vagrant.sh",
                         "scripts/virtualbox.sh",
+                        "scripts/sambadev.sh",
                         "scripts/cleanup.sh",
                         "scripts/zerodisk.sh"
                     ]
