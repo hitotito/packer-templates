@@ -1,0 +1,47 @@
+{
+    "variables": {
+        "core": "2",
+        "memory": "2048",
+        "disk_size": "40140",
+        "ssh_port": "22",
+        "ssh_wait_timeout": "10000s",
+        "iso_url": "https://cdimage.debian.org/cdimage/archive/9.2.0/amd64/iso-cd/debian-9.2.0-amd64-netinst.iso",
+        "iso_md5": "fdf1905e3fa321e0b930e47bcbc4d1e2",
+        "vm_name": "debian-9-2-stretch"
+    },
+    "builders": [
+        {
+            "type": "digitalocean",
+            "api_token": "058837cf891719f49bd4008f70bf122d8cca4046c2af7b2f85a35cfd8c0e0a66",
+            "image": "debian-9-x64",
+            "region": "sfo1",
+            "size": "512mb",
+            "ssh_username": "root",
+            "snapshot_name": "vagrant-debian-9"
+        }
+    ],
+    "post-processors": [
+        {
+            "type": "vagrant",
+            "override": {
+                "virtualbox": {
+                    "output": "{{user `vm_name`}}.box"
+                }
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+            "override": {
+                "digitalocean": {
+                    "scripts": [
+                        "scripts/base.sh",
+                        "scripts/vagrant.sh"
+                    ]
+                }
+            }
+        }
+    ]
+}
