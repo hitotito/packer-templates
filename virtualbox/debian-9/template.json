@@ -5,9 +5,9 @@
         "disk_size": "40140",
         "ssh_port": "22",
         "ssh_wait_timeout": "10000s",
-        "iso_url": "https://cdimage.debian.org/cdimage/archive/9.2.0/amd64/iso-cd/debian-9.2.0-amd64-netinst.iso",
-        "iso_md5": "fdf1905e3fa321e0b930e47bcbc4d1e2",
-        "vm_name": "debian-9-2-stretch"
+        "iso_url": "http://mirrors.ocf.berkeley.edu/debian-cd/current/amd64/iso-cd/debian-9.4.0-amd64-netinst.iso",
+        "iso_md5": "73bd8aaaeb843745ec939f6ae3906e48",
+        "vm_name": "debian-9-stretch"
     },
     "builders": [
         {
@@ -63,12 +63,12 @@
             "override": {
                 "virtualbox-iso": {
                     "scripts": [
-                        "scripts/base.sh",
-                        "scripts/vagrant.sh",
-                        "scripts/virtualbox.sh",
-                        "scripts/sambadev.sh",
-                        "scripts/cleanup.sh",
-                        "scripts/zerodisk.sh"
+                        "../scripts/base.sh",
+                        "../scripts/vagrant.sh",
+                        "../scripts/virtualbox.sh",
+                        "../scripts/dev.sh",
+                        "../scripts/cleanup.sh",
+                        "../scripts/zerodisk.sh"
                     ]
                 }
             }
