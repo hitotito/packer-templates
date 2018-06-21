@@ -1,13 +1,13 @@
 {
     "variables": {
-        "core": "1",
+        "core": "2",
         "memory": "2048",
         "disk_size": "40140",
         "ssh_port": "22",
         "ssh_wait_timeout": "10000s",
-        "iso_url": "https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/debian-8.10.0-amd64-netinst.iso",
-        "iso_md5": "19dcfc381bd3e609c6056216d203f5bc",
-        "vm_name": "debian-8-jessie"
+        "iso_url": "http://mirrors.ocf.berkeley.edu/debian-cd/current/amd64/iso-cd/debian-9.4.0-amd64-netinst.iso",
+        "iso_md5": "73bd8aaaeb843745ec939f6ae3906e48",
+        "vm_name": "debian-9-stretch"
     },
     "builders": [
         {
@@ -15,12 +15,12 @@
             "boot_command": [
                 "<tab><wait>",
                 "install <wait>",
-                "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg <wait>",
+                "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed_raid.cfg <wait>",
                 "debian-installer=en_US <wait>",
                 "auto <wait>",
                 "locale=en_US <wait>",
                 "kbd-chooser/method=us <wait>",
-                "netcfg/get_hostname={{ .Name }} <wait>",
+                "netcfg/get_hostname={{.Name}} <wait>",
                 "netcfg/get_domain=acalustra.com <wait>",
                 "fb=false <wait>",
                 "debconf/frontend=noninteractive <wait>",
@@ -31,6 +31,8 @@
             ],
             "boot_wait": "10s",
             "disk_size": "{{user `disk_size`}}",
+            "hard_drive_interface": "sata",
+            "sata_port_count": 2,
             "guest_os_type": "Debian_64",
             "http_directory": "http",
             "iso_checksum": "{{user `iso_md5`}}",
@@ -42,7 +44,18 @@
             "ssh_wait_timeout": "{{user `ssh_wait_timeout`}}",
             "vboxmanage": [
                 [ "modifyvm", "{{.Name}}", "--memory", "{{user `memory`}}" ],
-                [ "modifyvm", "{{.Name}}", "--cpus", "{{user `core`}}" ]
+                [ "modifyvm", "{{.Name}}", "--cpus", "{{user `core`}}" ],
+                [ "createmedium", "--format", "vdi",
+                                  "--filename", "output-virtualbox-iso/{{.Name}}-disk2.vdi",
+                                  "--size", "{{user `disk_size`}}" ],
+                [ "storageattach", "{{.Name}}",
+                                   "--storagectl", "SATA Controller",
+                                   "--port", "1",
+                                   "--device", "0",
+                                   "--type", "hdd",
+                                   "--medium", "output-virtualbox-iso/{{.Name}}-disk2.vdi",
+                                   "--hotpluggable", "on" ]
+
             ]
         }
     ],

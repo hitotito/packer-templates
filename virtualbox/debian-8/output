@@ -1,0 +1,1620 @@
+[1;32mvirtualbox-iso output will be in this color.[0m
+
+[1;32mWarnings for build 'virtualbox-iso':
+[0m
+[1;32m* A shutdown_command was not specified. Without a shutdown command, Packer
+will forcibly halt the virtual machine, which may result in data loss.[0m
+[1;32m[0m
+[1;32m==> virtualbox-iso: Downloading or copying Guest additions[0m
+[0;32m    virtualbox-iso: Downloading or copying: file:///Applications/VirtualBox.app/Contents/MacOS/VBoxGuestAdditions.iso[0m
+[1;32m==> virtualbox-iso: Downloading or copying ISO[0m
+[0;32m    virtualbox-iso: Found already downloaded, initial checksum matched, no download needed: https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/debian-8.10.0-amd64-netinst.iso[0m
+[1;32m==> virtualbox-iso: Starting HTTP server on port 8248[0m
+[1;32m==> virtualbox-iso: Creating virtual machine...[0m
+[1;32m==> virtualbox-iso: Creating hard drive...[0m
+[1;32m==> virtualbox-iso: Creating forwarded port mapping for communicator (SSH, WinRM, etc) (host port 2674)[0m
+[1;32m==> virtualbox-iso: Executing custom VBoxManage commands...[0m
+[0;32m    virtualbox-iso: Executing: modifyvm packer-virtualbox-iso-1526505256 --memory 2048[0m
+[0;32m    virtualbox-iso: Executing: modifyvm packer-virtualbox-iso-1526505256 --cpus 1[0m
+[1;32m==> virtualbox-iso: Starting the virtual machine...[0m
+[1;32m==> virtualbox-iso: Waiting 10s for boot...[0m
+[1;32m==> virtualbox-iso: Typing the boot command...[0m
+[1;32m==> virtualbox-iso: Waiting for SSH to become available...[0m
+[1;32m==> virtualbox-iso: Connected to SSH![0m
+[1;32m==> virtualbox-iso: Uploading VirtualBox version info (5.2.10)[0m
+[1;32m==> virtualbox-iso: Uploading VirtualBox guest additions ISO...[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/base.sh[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: We trust you have received the usual lecture from the local System[0m
+[0;32m    virtualbox-iso: Administrator. It usually boils down to these three things:[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso:     #1) Respect the privacy of others.[0m
+[0;32m    virtualbox-iso:     #2) Think before you type.[0m
+[0;32m    virtualbox-iso:     #3) With great power comes great responsibility.[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: Hit http://security.debian.org jessie/updates InRelease[0m
+[0;32m    virtualbox-iso: Hit http://security.debian.org jessie/updates/main Sources[0m
+[0;32m    virtualbox-iso: Hit http://security.debian.org jessie/updates/main amd64 Packages[0m
+[0;32m    virtualbox-iso: Hit http://security.debian.org jessie/updates/main Translation-en[0m
+[0;32m    virtualbox-iso: Ign http://http.us.debian.org jessie InRelease[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie-updates InRelease[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie Release.gpg[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie-updates/main Sources[0m
+[0;32m    virtualbox-iso: Get:1 http://http.us.debian.org jessie-updates/main amd64 Packages/DiffIndex [11.8 kB][0m
+[0;32m    virtualbox-iso: Get:2 http://http.us.debian.org jessie-updates/main Translation-en/DiffIndex [3,688 B][0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie Release[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie/main Sources[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie/main amd64 Packages[0m
+[0;32m    virtualbox-iso: Hit http://http.us.debian.org jessie/main Translation-en[0m
+[0;32m    virtualbox-iso: Fetched 15.5 kB in 2s (7,728 B/s)[0m
+[0;32m    virtualbox-iso: Reading package lists...[0m
+[0;32m    virtualbox-iso: Reading package lists...[0m
+[0;32m    virtualbox-iso: Building dependency tree...[0m
+[0;32m    virtualbox-iso: Reading state information...[0m
+[0;32m    virtualbox-iso: The following packages have been kept back:[0m
+[0;32m    virtualbox-iso:   linux-image-amd64[0m
+[0;32m    virtualbox-iso: The following packages will be upgraded:[0m
+[0;32m    virtualbox-iso:   gcc-4.9-base isc-dhcp-client isc-dhcp-common libdns-export100 libgcc1[0m
+[0;32m    virtualbox-iso:   libicu52 libirs-export91 libisc-export95 libisccfg-export90 libssl1.0.0[0m
+[0;32m    virtualbox-iso:   libstdc++6 linux-image-3.16.0-4-amd64 sensible-utils tzdata wget[0m
+[0;32m    virtualbox-iso: 15 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.[0m
+[0;32m    virtualbox-iso: Need to get 44.2 MB of archives.[0m
+[0;32m    virtualbox-iso: After this operation, 523 kB disk space will be freed.[0m
+[0;32m    virtualbox-iso: Get:1 http://security.debian.org/ jessie/updates/main gcc-4.9-base amd64 4.9.2-10+deb8u1 [160 kB][0m
+[0;32m    virtualbox-iso: Get:2 http://security.debian.org/ jessie/updates/main libstdc++6 amd64 4.9.2-10+deb8u1 [273 kB][0m
+[0;32m    virtualbox-iso: Get:3 http://security.debian.org/ jessie/updates/main libgcc1 amd64 1:4.9.2-10+deb8u1 [39.5 kB][0m
+[0;32m    virtualbox-iso: Get:4 http://security.debian.org/ jessie/updates/main libssl1.0.0 amd64 1.0.1t-1+deb8u8 [1,044 kB][0m
+[0;32m    virtualbox-iso: Get:5 http://http.us.debian.org/debian/ jessie-updates/main linux-image-3.16.0-4-amd64 amd64 3.16.51-3 [34.0 MB][0m
+[0;32m    virtualbox-iso: Get:6 http://security.debian.org/ jessie/updates/main libisc-export95 amd64 1:9.9.5.dfsg-9+deb8u15 [141 kB][0m
+[0;32m    virtualbox-iso: Get:7 http://security.debian.org/ jessie/updates/main libdns-export100 amd64 1:9.9.5.dfsg-9+deb8u15 [457 kB][0m
+[0;32m    virtualbox-iso: Get:8 http://security.debian.org/ jessie/updates/main libicu52 amd64 52.1-8+deb8u7 [6,807 kB][0m
+[0;32m    virtualbox-iso: Get:9 http://security.debian.org/ jessie/updates/main libisccfg-export90 amd64 1:9.9.5.dfsg-9+deb8u15 [41.5 kB][0m
+[0;32m    virtualbox-iso: Get:10 http://security.debian.org/ jessie/updates/main libirs-export91 amd64 1:9.9.5.dfsg-9+deb8u15 [39.2 kB][0m
+[0;32m    virtualbox-iso: Get:11 http://security.debian.org/ jessie/updates/main sensible-utils all 0.0.9+deb8u1 [10.9 kB][0m
+[0;32m    virtualbox-iso: Get:12 http://security.debian.org/ jessie/updates/main isc-dhcp-client amd64 4.3.1-6+deb8u3 [250 kB][0m
+[0;32m    virtualbox-iso: Get:13 http://security.debian.org/ jessie/updates/main isc-dhcp-common amd64 4.3.1-6+deb8u3 [211 kB][0m
+[0;32m    virtualbox-iso: Get:14 http://security.debian.org/ jessie/updates/main wget amd64 1.16-1+deb8u5 [496 kB][0m
+[0;32m    virtualbox-iso: Get:15 http://http.us.debian.org/debian/ jessie-updates/main tzdata all 2018e-0+deb8u1 [233 kB][0m
+[0;32m    virtualbox-iso: [sudo] password for vagrant: Reading changelogs...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Teletype[0m
+[0;32m    virtualbox-iso: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    virtualbox-iso: Fetched 44.2 MB in 7s (6,018 kB/s)[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../gcc-4.9-base_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking gcc-4.9-base:amd64 (4.9.2-10+deb8u1) over (4.9.2-10) ...[0m
+[0;32m    virtualbox-iso: Setting up gcc-4.9-base:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libstdc++6_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libstdc++6:amd64 (4.9.2-10+deb8u1) over (4.9.2-10) ...[0m
+[0;32m    virtualbox-iso: Setting up libstdc++6:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for libc-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libgcc1_1%3a4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libgcc1:amd64 (1:4.9.2-10+deb8u1) over (1:4.9.2-10) ...[0m
+[0;32m    virtualbox-iso: Setting up libgcc1:amd64 (1:4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for libc-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libssl1.0.0_1.0.1t-1+deb8u8_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libssl1.0.0:amd64 (1.0.1t-1+deb8u8) over (1.0.1t-1+deb8u7) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libisc-export95_1%3a9.9.5.dfsg-9+deb8u15_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libisc-export95 (1:9.9.5.dfsg-9+deb8u15) over (1:9.9.5.dfsg-9+deb8u14) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libdns-export100_1%3a9.9.5.dfsg-9+deb8u15_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libdns-export100 (1:9.9.5.dfsg-9+deb8u15) over (1:9.9.5.dfsg-9+deb8u14) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libicu52_52.1-8+deb8u7_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libicu52:amd64 (52.1-8+deb8u7) over (52.1-8+deb8u6) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libisccfg-export90_1%3a9.9.5.dfsg-9+deb8u15_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libisccfg-export90 (1:9.9.5.dfsg-9+deb8u15) over (1:9.9.5.dfsg-9+deb8u14) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libirs-export91_1%3a9.9.5.dfsg-9+deb8u15_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libirs-export91 (1:9.9.5.dfsg-9+deb8u15) over (1:9.9.5.dfsg-9+deb8u14) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-image-3.16.0-4-amd64_3.16.51-3_amd64.deb ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: Unpacking linux-image-3.16.0-4-amd64 (3.16.51-3) over (3.16.51-2) ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../sensible-utils_0.0.9+deb8u1_all.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking sensible-utils (0.0.9+deb8u1) over (0.0.9) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for man-db (2.7.0.2-5) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for mime-support (3.58) ...[0m
+[0;32m    virtualbox-iso: Setting up sensible-utils (0.0.9+deb8u1) ...[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../tzdata_2018e-0+deb8u1_all.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking tzdata (2018e-0+deb8u1) over (2017c-0+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up tzdata (2018e-0+deb8u1) ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: Current default time zone: 'Etc/UTC'[0m
+[0;32m    virtualbox-iso: Local time is now:      Wed May 16 21:19:14 UTC 2018.[0m
+[0;32m    virtualbox-iso: Universal Time is now:  Wed May 16 21:19:14 UTC 2018.[0m
+[0;32m    virtualbox-iso: Run 'dpkg-reconfigure tzdata' if you wish to change it.[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../isc-dhcp-client_4.3.1-6+deb8u3_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking isc-dhcp-client (4.3.1-6+deb8u3) over (4.3.1-6+deb8u2) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../isc-dhcp-common_4.3.1-6+deb8u3_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking isc-dhcp-common (4.3.1-6+deb8u3) over (4.3.1-6+deb8u2) ...[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../wget_1.16-1+deb8u5_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking wget (1.16-1+deb8u5) over (1.16-1+deb8u4) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for man-db (2.7.0.2-5) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for install-info (5.2.0.dfsg.1-6) ...[0m
+[0;32m    virtualbox-iso: Setting up libssl1.0.0:amd64 (1.0.1t-1+deb8u8) ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: Setting up libisc-export95 (1:9.9.5.dfsg-9+deb8u15) ...[0m
+[0;32m    virtualbox-iso: Setting up libdns-export100 (1:9.9.5.dfsg-9+deb8u15) ...[0m
+[0;32m    virtualbox-iso: Setting up libicu52:amd64 (52.1-8+deb8u7) ...[0m
+[0;32m    virtualbox-iso: Setting up libisccfg-export90 (1:9.9.5.dfsg-9+deb8u15) ...[0m
+[0;32m    virtualbox-iso: Setting up libirs-export91 (1:9.9.5.dfsg-9+deb8u15) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-image-3.16.0-4-amd64 (3.16.51-3) ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: /etc/kernel/postinst.d/initramfs-tools:[0m
+[0;32m    virtualbox-iso: update-initramfs: Generating /boot/initrd.img-3.16.0-4-amd64[0m
+[0;32m    virtualbox-iso: /etc/kernel/postinst.d/zz-update-grub:[0m
+[0;32m    virtualbox-iso: Generating grub configuration file ...[0m
+[0;32m    virtualbox-iso: Found linux image: /boot/vmlinuz-3.16.0-4-amd64[0m
+[0;32m    virtualbox-iso: Found initrd image: /boot/initrd.img-3.16.0-4-amd64[0m
+[0;32m    virtualbox-iso: done[0m
+[0;32m    virtualbox-iso: Setting up isc-dhcp-common (4.3.1-6+deb8u3) ...[0m
+[0;32m    virtualbox-iso: Setting up isc-dhcp-client (4.3.1-6+deb8u3) ...[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: Setting up wget (1.16-1+deb8u5) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for libc-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: Reading package lists...[0m
+[0;32m    virtualbox-iso: Building dependency tree...[0m
+[0;32m    virtualbox-iso: Reading state information...[0m
+[0;32m    virtualbox-iso: The following extra packages will be installed:[0m
+[0;32m    virtualbox-iso:   binutils cpp-4.8 gcc-4.8 libasan0 libatomic1 libc-dev-bin libc6-dev[0m
+[0;32m    virtualbox-iso:   libcloog-isl4 libgcc-4.8-dev libgomp1 libisl10 libitm1 libmpc3 libmpfr4[0m
+[0;32m    virtualbox-iso:   libquadmath0 libtsan0 linux-compiler-gcc-4.8-x86[0m
+[0;32m    virtualbox-iso:   linux-headers-3.16.0-4-common linux-kbuild-3.16 linux-libc-dev manpages-dev[0m
+[0;32m    virtualbox-iso: Suggested packages:[0m
+[0;32m    virtualbox-iso:   binutils-doc gcc-4.8-locales gcc-4.8-multilib gcc-4.8-doc libgcc1-dbg[0m
+[0;32m    virtualbox-iso:   libgomp1-dbg libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg[0m
+[0;32m    virtualbox-iso:   libquadmath0-dbg glibc-doc[0m
+[0;32m    virtualbox-iso: The following NEW packages will be installed:[0m
+[0;32m    virtualbox-iso:   binutils cpp-4.8 gcc-4.8 libasan0 libatomic1 libc-dev-bin libc6-dev[0m
+[0;32m    virtualbox-iso:   libcloog-isl4 libgcc-4.8-dev libgomp1 libisl10 libitm1 libmpc3 libmpfr4[0m
+[0;32m    virtualbox-iso:   libquadmath0 libtsan0 linux-compiler-gcc-4.8-x86[0m
+[0;32m    virtualbox-iso:   linux-headers-3.16.0-4-amd64 linux-headers-3.16.0-4-common linux-kbuild-3.16[0m
+[0;32m    virtualbox-iso:   linux-libc-dev manpages-dev[0m
+[0;32m    virtualbox-iso: 0 upgraded, 22 newly installed, 0 to remove and 1 not upgraded.[0m
+[0;32m    virtualbox-iso: Need to get 26.9 MB of archives.[0m
+[0;32m    virtualbox-iso: After this operation, 105 MB of additional disk space will be used.[0m
+[0;32m    virtualbox-iso: Get:1 http://security.debian.org/ jessie/updates/main libatomic1 amd64 4.9.2-10+deb8u1 [9,014 B][0m
+[0;32m    virtualbox-iso: Get:2 http://http.us.debian.org/debian/ jessie/main libasan0 amd64 4.8.4-1 [63.3 kB][0m
+[0;32m    virtualbox-iso: Get:3 http://security.debian.org/ jessie/updates/main libgomp1 amd64 4.9.2-10+deb8u1 [37.8 kB][0m
+[0;32m    virtualbox-iso: Get:4 http://http.us.debian.org/debian/ jessie/main libisl10 amd64 0.12.2-2 [440 kB][0m
+[0;32m    virtualbox-iso: Get:5 http://security.debian.org/ jessie/updates/main libitm1 amd64 4.9.2-10+deb8u1 [29.3 kB][0m
+[0;32m    virtualbox-iso: Get:6 http://security.debian.org/ jessie/updates/main libquadmath0 amd64 4.9.2-10+deb8u1 [129 kB][0m
+[0;32m    virtualbox-iso: Get:7 http://security.debian.org/ jessie/updates/main libtsan0 amd64 4.9.2-10+deb8u1 [212 kB][0m
+[0;32m    virtualbox-iso: Get:8 http://http.us.debian.org/debian/ jessie/main libcloog-isl4 amd64 0.18.2-1+b2 [61.8 kB][0m
+[0;32m    virtualbox-iso: Get:9 http://http.us.debian.org/debian/ jessie/main libmpfr4 amd64 3.1.2-2 [527 kB][0m
+[0;32m    virtualbox-iso: Get:10 http://security.debian.org/ jessie/updates/main linux-kbuild-3.16 amd64 3.16.56-1 [176 kB][0m
+[0;32m    virtualbox-iso: Get:11 http://http.us.debian.org/debian/ jessie/main libmpc3 amd64 1.0.2-1 [39.3 kB][0m
+[0;32m    virtualbox-iso: Get:12 http://http.us.debian.org/debian/ jessie/main binutils amd64 2.25-5+deb8u1 [3,496 kB][0m
+[0;32m    virtualbox-iso: Get:13 http://security.debian.org/ jessie/updates/main linux-libc-dev amd64 3.16.56-1+deb8u1 [1,096 kB][0m
+[0;32m    virtualbox-iso: Get:14 http://http.us.debian.org/debian/ jessie/main cpp-4.8 amd64 4.8.4-1 [4,577 kB][0m
+[0;32m    virtualbox-iso: Get:15 http://http.us.debian.org/debian/ jessie/main libgcc-4.8-dev amd64 4.8.4-1 [1,689 kB][0m
+[0;32m    virtualbox-iso: Get:16 http://http.us.debian.org/debian/ jessie/main gcc-4.8 amd64 4.8.4-1 [4,787 kB][0m
+[0;32m    virtualbox-iso: Get:17 http://security.debian.org/ jessie/updates/main linux-compiler-gcc-4.8-x86 amd64 3.16.51-3+deb8u1 [382 kB][0m
+[0;32m    virtualbox-iso: Get:18 http://http.us.debian.org/debian/ jessie/main libc-dev-bin amd64 2.19-18+deb8u10 [238 kB][0m
+[0;32m    virtualbox-iso: Get:19 http://http.us.debian.org/debian/ jessie/main libc6-dev amd64 2.19-18+deb8u10 [2,003 kB][0m
+[0;32m    virtualbox-iso: Get:20 http://http.us.debian.org/debian/ jessie-updates/main linux-headers-3.16.0-4-common amd64 3.16.51-3 [4,580 kB][0m
+[0;32m    virtualbox-iso: Get:21 http://http.us.debian.org/debian/ jessie-updates/main linux-headers-3.16.0-4-amd64 amd64 3.16.51-3 [451 kB][0m
+[0;32m    virtualbox-iso: Get:22 http://http.us.debian.org/debian/ jessie/main manpages-dev all 3.74-1 [1,865 kB][0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Teletype[0m
+[0;32m    virtualbox-iso: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    virtualbox-iso: Fetched 26.9 MB in 3s (6,891 kB/s)[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libasan0:amd64.[0m
+[0;32m    virtualbox-iso: (Reading database ... 30343 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libasan0_4.8.4-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libasan0:amd64 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libatomic1:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libatomic1_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libatomic1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libisl10:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libisl10_0.12.2-2_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libisl10:amd64 (0.12.2-2) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libcloog-isl4:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libcloog-isl4_0.18.2-1+b2_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libcloog-isl4:amd64 (0.18.2-1+b2) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libgomp1:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libgomp1_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libgomp1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libitm1:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libitm1_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libitm1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libmpfr4:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libmpfr4_3.1.2-2_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libmpfr4:amd64 (3.1.2-2) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libquadmath0:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libquadmath0_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libquadmath0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libtsan0:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libtsan0_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libtsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libmpc3:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libmpc3_1.0.2-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libmpc3:amd64 (1.0.2-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package binutils.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../binutils_2.25-5+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking binutils (2.25-5+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package cpp-4.8.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../cpp-4.8_4.8.4-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking cpp-4.8 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libgcc-4.8-dev:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libgcc-4.8-dev_4.8.4-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libgcc-4.8-dev:amd64 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package gcc-4.8.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../gcc-4.8_4.8.4-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking gcc-4.8 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libc-dev-bin.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libc-dev-bin_2.19-18+deb8u10_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libc-dev-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package linux-libc-dev:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-libc-dev_3.16.56-1+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking linux-libc-dev:amd64 (3.16.56-1+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libc6-dev:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libc6-dev_2.19-18+deb8u10_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libc6-dev:amd64 (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package linux-compiler-gcc-4.8-x86.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-compiler-gcc-4.8-x86_3.16.51-3+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking linux-compiler-gcc-4.8-x86 (3.16.51-3+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package linux-headers-3.16.0-4-common.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-headers-3.16.0-4-common_3.16.51-3_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking linux-headers-3.16.0-4-common (3.16.51-3) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package linux-kbuild-3.16.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-kbuild-3.16_3.16.56-1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking linux-kbuild-3.16 (3.16.56-1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package linux-headers-3.16.0-4-amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../linux-headers-3.16.0-4-amd64_3.16.51-3_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking linux-headers-3.16.0-4-amd64 (3.16.51-3) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package manpages-dev.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../manpages-dev_3.74-1_all.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking manpages-dev (3.74-1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for man-db (2.7.0.2-5) ...[0m
+[0;32m    virtualbox-iso: Setting up libasan0:amd64 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Setting up libatomic1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libisl10:amd64 (0.12.2-2) ...[0m
+[0;32m    virtualbox-iso: Setting up libcloog-isl4:amd64 (0.18.2-1+b2) ...[0m
+[0;32m    virtualbox-iso: Setting up libgomp1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libitm1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libmpfr4:amd64 (3.1.2-2) ...[0m
+[0;32m    virtualbox-iso: Setting up libquadmath0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libtsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libmpc3:amd64 (1.0.2-1) ...[0m
+[0;32m    virtualbox-iso: Setting up binutils (2.25-5+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up cpp-4.8 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Setting up libgcc-4.8-dev:amd64 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Setting up gcc-4.8 (4.8.4-1) ...[0m
+[0;32m    virtualbox-iso: Setting up libc-dev-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-libc-dev:amd64 (3.16.56-1+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libc6-dev:amd64 (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-compiler-gcc-4.8-x86 (3.16.51-3+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-headers-3.16.0-4-common (3.16.51-3) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-kbuild-3.16 (3.16.56-1) ...[0m
+[0;32m    virtualbox-iso: Setting up linux-headers-3.16.0-4-amd64 (3.16.51-3) ...[0m
+[0;32m    virtualbox-iso: Setting up manpages-dev (3.74-1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for libc-bin (2.19-18+deb8u10) ...[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/vagrant.sh[0m
+[0;32m    virtualbox-iso: Usage: useradd [options] LOGIN[0m
+[0;32m    virtualbox-iso:        useradd -D[0m
+[0;32m    virtualbox-iso:        useradd -D [options][0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: Options:[0m
+[0;32m    virtualbox-iso:   -b, --base-dir BASE_DIR       base directory for the home directory of the[0m
+[0;32m    virtualbox-iso:                                 new account[0m
+[0;32m    virtualbox-iso:   -c, --comment COMMENT         GECOS field of the new account[0m
+[0;32m    virtualbox-iso:   -d, --home-dir HOME_DIR       home directory of the new account[0m
+[0;32m    virtualbox-iso:   -D, --defaults                print or change default useradd configuration[0m
+[0;32m    virtualbox-iso:   -e, --expiredate EXPIRE_DATE  expiration date of the new account[0m
+[0;32m    virtualbox-iso:   -f, --inactive INACTIVE       password inactivity period of the new account[0m
+[0;32m    virtualbox-iso:   -g, --gid GROUP               name or ID of the primary group of the new[0m
+[0;32m    virtualbox-iso:                                 account[0m
+[0;32m    virtualbox-iso:   -G, --groups GROUPS           list of supplementary groups of the new[0m
+[0;32m    virtualbox-iso:                                 account[0m
+[0;32m    virtualbox-iso:   -h, --help                    display this help message and exit[0m
+[0;32m    virtualbox-iso:   -k, --skel SKEL_DIR           use this alternative skeleton directory[0m
+[0;32m    virtualbox-iso:   -K, --key KEY=VALUE           override /etc/login.defs defaults[0m
+[0;32m    virtualbox-iso:   -l, --no-log-init             do not add the user to the lastlog and[0m
+[0;32m    virtualbox-iso:                                 faillog databases[0m
+[0;32m    virtualbox-iso:   -m, --create-home             create the user's home directory[0m
+[0;32m    virtualbox-iso:   -M, --no-create-home          do not create the user's home directory[0m
+[0;32m    virtualbox-iso:   -N, --no-user-group           do not create a group with the same name as[0m
+[0;32m    virtualbox-iso:                                 the user[0m
+[0;32m    virtualbox-iso:   -o, --non-unique              allow to create users with duplicate[0m
+[0;32m    virtualbox-iso:                                 (non-unique) UID[0m
+[0;32m    virtualbox-iso:   -p, --password PASSWORD       encrypted password of the new account[0m
+[0;32m    virtualbox-iso:   -r, --system                  create a system account[0m
+[0;32m    virtualbox-iso:   -R, --root CHROOT_DIR         directory to chroot into[0m
+[0;32m    virtualbox-iso:   -s, --shell SHELL             login shell of the new account[0m
+[0;32m    virtualbox-iso:   -u, --uid UID                 user ID of the new account[0m
+[0;32m    virtualbox-iso:   -U, --user-group              create a group with the same name as the user[0m
+[0;32m    virtualbox-iso:   -Z, --selinux-user SEUSER     use a specific SEUSER for the SELinux user mapping[0m
+[0;32m    virtualbox-iso:[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/virtualbox.sh[0m
+[0;32m    virtualbox-iso: Reading package lists...[0m
+[0;32m    virtualbox-iso: Building dependency tree...[0m
+[0;32m    virtualbox-iso: Reading state information...[0m
+[0;32m    virtualbox-iso: wget is already the newest version.[0m
+[0;32m    virtualbox-iso: The following extra packages will be installed:[0m
+[0;32m    virtualbox-iso:   cpp cpp-4.9 gcc-4.9 libasan1 libcilkrts5 libgcc-4.9-dev liblsan0 libubsan0[0m
+[0;32m    virtualbox-iso: Suggested packages:[0m
+[0;32m    virtualbox-iso:   cpp-doc gcc-4.9-locales gcc-multilib autoconf automake libtool flex bison[0m
+[0;32m    virtualbox-iso:   gdb gcc-doc gcc-4.9-multilib gcc-4.9-doc libgcc1-dbg libgomp1-dbg[0m
+[0;32m    virtualbox-iso:   libitm1-dbg libatomic1-dbg libasan1-dbg liblsan0-dbg libtsan0-dbg[0m
+[0;32m    virtualbox-iso:   libubsan0-dbg libcilkrts5-dbg libquadmath0-dbg make-doc[0m
+[0;32m    virtualbox-iso: The following NEW packages will be installed:[0m
+[0;32m    virtualbox-iso:   cpp cpp-4.9 gcc gcc-4.9 libasan1 libcilkrts5 libgcc-4.9-dev liblsan0[0m
+[0;32m    virtualbox-iso:   libubsan0 make[0m
+[0;32m    virtualbox-iso: 0 upgraded, 10 newly installed, 0 to remove and 1 not upgraded.[0m
+[0;32m    virtualbox-iso: Need to get 13.0 MB of archives.[0m
+[0;32m    virtualbox-iso: After this operation, 48.1 MB of additional disk space will be used.[0m
+[0;32m    virtualbox-iso: Get:1 http://security.debian.org/ jessie/updates/main libasan1 amd64 4.9.2-10+deb8u1 [195 kB][0m
+[0;32m    virtualbox-iso: Get:2 http://http.us.debian.org/debian/ jessie/main cpp amd64 4:4.9.2-2 [17.3 kB][0m
+[0;32m    virtualbox-iso: Get:3 http://http.us.debian.org/debian/ jessie/main gcc amd64 4:4.9.2-2 [5,136 B][0m
+[0;32m    virtualbox-iso: Get:4 http://http.us.debian.org/debian/ jessie/main make amd64 4.0-8.1 [349 kB][0m
+[0;32m    virtualbox-iso: Get:5 http://security.debian.org/ jessie/updates/main libcilkrts5 amd64 4.9.2-10+deb8u1 [40.1 kB][0m
+[0;32m    virtualbox-iso: Get:6 http://security.debian.org/ jessie/updates/main liblsan0 amd64 4.9.2-10+deb8u1 [92.7 kB][0m
+[0;32m    virtualbox-iso: Get:7 http://security.debian.org/ jessie/updates/main libubsan0 amd64 4.9.2-10+deb8u1 [82.4 kB][0m
+[0;32m    virtualbox-iso: Get:8 http://security.debian.org/ jessie/updates/main cpp-4.9 amd64 4.9.2-10+deb8u1 [5,002 kB][0m
+[0;32m    virtualbox-iso: Get:9 http://security.debian.org/ jessie/updates/main libgcc-4.9-dev amd64 4.9.2-10+deb8u1 [2,066 kB][0m
+[0;32m    virtualbox-iso: Get:10 http://security.debian.org/ jessie/updates/main gcc-4.9 amd64 4.9.2-10+deb8u1 [5,184 kB][0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Dialog[0m
+[0;32m    virtualbox-iso: debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: unable to initialize frontend: Readline[0m
+[0;32m    virtualbox-iso: debconf: (This frontend requires a controlling tty.)[0m
+[0;32m    virtualbox-iso: debconf: falling back to frontend: Teletype[0m
+[0;32m    virtualbox-iso: dpkg-preconfigure: unable to re-open stdin:[0m
+[0;32m    virtualbox-iso: Fetched 13.0 MB in 1s (6,614 kB/s)[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libasan1:amd64.[0m
+[0;32m    virtualbox-iso: (Reading database ... 44831 files and directories currently installed.)[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libasan1_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libasan1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libcilkrts5:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libcilkrts5_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libcilkrts5:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package liblsan0:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../liblsan0_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking liblsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libubsan0:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libubsan0_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libubsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package cpp-4.9.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../cpp-4.9_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking cpp-4.9 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package cpp.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../cpp_4%3a4.9.2-2_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking cpp (4:4.9.2-2) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package libgcc-4.9-dev:amd64.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../libgcc-4.9-dev_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking libgcc-4.9-dev:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package gcc-4.9.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../gcc-4.9_4.9.2-10+deb8u1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking gcc-4.9 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package gcc.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../gcc_4%3a4.9.2-2_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking gcc (4:4.9.2-2) ...[0m
+[0;32m    virtualbox-iso: Selecting previously unselected package make.[0m
+[0;32m    virtualbox-iso: Preparing to unpack .../make_4.0-8.1_amd64.deb ...[0m
+[0;32m    virtualbox-iso: Unpacking make (4.0-8.1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for man-db (2.7.0.2-5) ...[0m
+[0;32m    virtualbox-iso: Setting up libasan1:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libcilkrts5:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up liblsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up libubsan0:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up cpp-4.9 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up cpp (4:4.9.2-2) ...[0m
+[0;32m    virtualbox-iso: Setting up libgcc-4.9-dev:amd64 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up gcc-4.9 (4.9.2-10+deb8u1) ...[0m
+[0;32m    virtualbox-iso: Setting up gcc (4:4.9.2-2) ...[0m
+[0;32m    virtualbox-iso: Setting up make (4.0-8.1) ...[0m
+[0;32m    virtualbox-iso: Processing triggers for libc-bin (2.19-18+deb8u10) ...[0m
+[0;32m    virtualbox-iso: --2018-05-16 21:19:36--  https://download.virtualbox.org/virtualbox/5.2.8/VBoxGuestAdditions_5.2.8.iso[0m
+[0;32m    virtualbox-iso: Resolving download.virtualbox.org (download.virtualbox.org)... 23.53.254.156[0m
+[0;32m    virtualbox-iso: Connecting to download.virtualbox.org (download.virtualbox.org)|23.53.254.156|:443... connected.[0m
+[0;32m    virtualbox-iso: HTTP request sent, awaiting response... 200 OK[0m
+[0;32m    virtualbox-iso: Length: 57972736 (55M) [application/octet-stream][0m
+[0;32m    virtualbox-iso: Saving to: ‘VBoxGuestAdditions_5.2.8.iso’[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso:      0K .......... .......... .......... .......... ..........  0% 3.30M 17s[0m
+[0;32m    virtualbox-iso:     50K .......... .......... .......... .......... ..........  0% 2.00M 22s[0m
+[0;32m    virtualbox-iso:    100K .......... .......... .......... .......... ..........  0%  199M 15s[0m
+[0;32m    virtualbox-iso:    150K .......... .......... .......... .......... ..........  0% 3.49M 15s[0m
+[0;32m    virtualbox-iso:    200K .......... .......... .......... .......... ..........  0% 32.1M 12s[0m
+[0;32m    virtualbox-iso:    250K .......... .......... .......... .......... ..........  0% 4.73M 12s[0m
+[0;32m    virtualbox-iso:    300K .......... .......... .......... .......... ..........  0% 11.4M 11s[0m
+[0;32m    virtualbox-iso:    350K .......... .......... .......... .......... ..........  0% 25.9M 10s[0m
+[0;32m    virtualbox-iso:    400K .......... .......... .......... .......... ..........  0% 49.8M 9s[0m
+[0;32m    virtualbox-iso:    450K .......... .......... .......... .......... ..........  0% 4.70M 9s[0m
+[0;32m    virtualbox-iso:    500K .......... .......... .......... .......... ..........  0% 22.0M 9s[0m
+[0;32m    virtualbox-iso:    550K .......... .......... .......... .......... ..........  1% 22.1M 8s[0m
+[0;32m    virtualbox-iso:    600K .......... .......... .......... .......... ..........  1% 9.22M 8s[0m
+[0;32m    virtualbox-iso:    650K .......... .......... .......... .......... ..........  1%  427M 7s[0m
+[0;32m    virtualbox-iso:    700K .......... .......... .......... .......... ..........  1% 9.44M 7s[0m
+[0;32m    virtualbox-iso:    750K .......... .......... .......... .......... ..........  1% 45.3M 7s[0m
+[0;32m    virtualbox-iso:    800K .......... .......... .......... .......... ..........  1%  206M 7s[0m
+[0;32m    virtualbox-iso:    850K .......... .......... .......... .......... ..........  1% 50.5M 6s[0m
+[0;32m    virtualbox-iso:    900K .......... .......... .......... .......... ..........  1% 10.7M 6s[0m
+[0;32m    virtualbox-iso:    950K .......... .......... .......... .......... ..........  1% 5.85M 6s[0m
+[0;32m    virtualbox-iso:   1000K .......... .......... .......... .......... ..........  1%  293M 6s[0m
+[0;32m    virtualbox-iso:   1050K .......... .......... .......... .......... ..........  1% 69.2M 6s[0m
+[0;32m    virtualbox-iso:   1100K .......... .......... .......... .......... ..........  2% 34.1M 6s[0m
+[0;32m    virtualbox-iso:   1150K .......... .......... .......... .......... ..........  2% 37.1M 5s[0m
+[0;32m    virtualbox-iso:   1200K .......... .......... .......... .......... ..........  2% 29.1M 5s[0m
+[0;32m    virtualbox-iso:   1250K .......... .......... .......... .......... ..........  2% 75.5M 5s[0m
+[0;32m    virtualbox-iso:   1300K .......... .......... .......... .......... ..........  2%  369M 5s[0m
+[0;32m    virtualbox-iso:   1350K .......... .......... .......... .......... ..........  2% 32.2M 5s[0m
+[0;32m    virtualbox-iso:   1400K .......... .......... .......... .......... ..........  2% 7.01M 5s[0m
+[0;32m    virtualbox-iso:   1450K .......... .......... .......... .......... ..........  2% 31.3M 5s[0m
+[0;32m    virtualbox-iso:   1500K .......... .......... .......... .......... ..........  2% 32.7M 5s[0m
+[0;32m    virtualbox-iso:   1550K .......... .......... .......... .......... ..........  2% 72.4M 5s[0m
+[0;32m    virtualbox-iso:   1600K .......... .......... .......... .......... ..........  2%  386M 4s[0m
+[0;32m    virtualbox-iso:   1650K .......... .......... .......... .......... ..........  3% 10.7M 4s[0m
+[0;32m    virtualbox-iso:   1700K .......... .......... .......... .......... ..........  3%  162M 4s[0m
+[0;32m    virtualbox-iso:   1750K .......... .......... .......... .......... ..........  3% 34.4M 4s[0m
+[0;32m    virtualbox-iso:   1800K .......... .......... .......... .......... ..........  3% 45.0M 4s[0m
+[0;32m    virtualbox-iso:   1850K .......... .......... .......... .......... ..........  3% 99.4M 4s[0m
+[0;32m    virtualbox-iso:   1900K .......... .......... .......... .......... ..........  3% 16.7M 4s[0m
+[0;32m    virtualbox-iso:   1950K .......... .......... .......... .......... ..........  3% 45.7M 4s[0m
+[0;32m    virtualbox-iso:   2000K .......... .......... .......... .......... ..........  3% 32.9M 4s[0m
+[0;32m    virtualbox-iso:   2050K .......... .......... .......... .......... ..........  3% 39.6M 4s[0m
+[0;32m    virtualbox-iso:   2100K .......... .......... .......... .......... ..........  3%  493M 4s[0m
+[0;32m    virtualbox-iso:   2150K .......... .......... .......... .......... ..........  3% 36.2M 4s[0m
+[0;32m    virtualbox-iso:   2200K .......... .......... .......... .......... ..........  3% 39.3M 4s[0m
+[0;32m    virtualbox-iso:   2250K .......... .......... .......... .......... ..........  4%  163M 4s[0m
+[0;32m    virtualbox-iso:   2300K .......... .......... .......... .......... ..........  4% 19.3M 4s[0m
+[0;32m    virtualbox-iso:   2350K .......... .......... .......... .......... ..........  4% 60.7M 3s[0m
+[0;32m    virtualbox-iso:   2400K .......... .......... .......... .......... ..........  4%  220M 3s[0m
+[0;32m    virtualbox-iso:   2450K .......... .......... .......... .......... ..........  4%  385M 3s[0m
+[0;32m    virtualbox-iso:   2500K .......... .......... .......... .......... ..........  4% 18.3M 3s[0m
+[0;32m    virtualbox-iso:   2550K .......... .......... .......... .......... ..........  4%  143M 3s[0m
+[0;32m    virtualbox-iso:   2600K .......... .......... .......... .......... ..........  4%  530M 3s[0m
+[0;32m    virtualbox-iso:   2650K .......... .......... .......... .......... ..........  4% 10.1M 3s[0m
+[0;32m    virtualbox-iso:   2700K .......... .......... .......... .......... ..........  4%  143M 3s[0m
+[0;32m    virtualbox-iso:   2750K .......... .......... .......... .......... ..........  4%  494M 3s[0m
+[0;32m    virtualbox-iso:   2800K .......... .......... .......... .......... ..........  5% 52.5M 3s[0m
+[0;32m    virtualbox-iso:   2850K .......... .......... .......... .......... ..........  5% 15.8M 3s[0m
+[0;32m    virtualbox-iso:   2900K .......... .......... .......... .......... ..........  5% 21.9M 3s[0m
+[0;32m    virtualbox-iso:   2950K .......... .......... .......... .......... ..........  5% 11.4M 3s[0m
+[0;32m    virtualbox-iso:   3000K .......... .......... .......... .......... ..........  5% 29.1M 3s[0m
+[0;32m    virtualbox-iso:   3050K .......... .......... .......... .......... ..........  5%  102M 3s[0m
+[0;32m    virtualbox-iso:   3100K .......... .......... .......... .......... ..........  5%  416M 3s[0m
+[0;32m    virtualbox-iso:   3150K .......... .......... .......... .......... ..........  5% 8.41M 3s[0m
+[0;32m    virtualbox-iso:   3200K .......... .......... .......... .......... ..........  5% 7.96M 3s[0m
+[0;32m    virtualbox-iso:   3250K .......... .......... .......... .......... ..........  5% 98.8M 3s[0m
+[0;32m    virtualbox-iso:   3300K .......... .......... .......... .......... ..........  5% 17.8M 3s[0m
+[0;32m    virtualbox-iso:   3350K .......... .......... .......... .......... ..........  6% 18.6M 3s[0m
+[0;32m    virtualbox-iso:   3400K .......... .......... .......... .......... ..........  6% 23.2M 3s[0m
+[0;32m    virtualbox-iso:   3450K .......... .......... .......... .......... ..........  6%  114M 3s[0m
+[0;32m    virtualbox-iso:   3500K .......... .......... .......... .......... ..........  6% 11.0M 3s[0m
+[0;32m    virtualbox-iso:   3550K .......... .......... .......... .......... ..........  6% 12.4M 3s[0m
+[0;32m    virtualbox-iso:   3600K .......... .......... .......... .......... ..........  6%  419M 3s[0m
+[0;32m    virtualbox-iso:   3650K .......... .......... .......... .......... ..........  6% 41.8M 3s[0m
+[0;32m    virtualbox-iso:   3700K .......... .......... .......... .......... ..........  6% 19.2M 3s[0m
+[0;32m    virtualbox-iso:   3750K .......... .......... .......... .......... ..........  6% 38.7M 3s[0m
+[0;32m    virtualbox-iso:   3800K .......... .......... .......... .......... ..........  6% 27.7M 3s[0m
+[0;32m    virtualbox-iso:   3850K .......... .......... .......... .......... ..........  6% 21.8M 3s[0m
+[0;32m    virtualbox-iso:   3900K .......... .......... .......... .......... ..........  6% 26.3M 3s[0m
+[0;32m    virtualbox-iso:   3950K .......... .......... .......... .......... ..........  7% 7.54M 3s[0m
+[0;32m    virtualbox-iso:   4000K .......... .......... .......... .......... ..........  7% 20.5M 3s[0m
+[0;32m    virtualbox-iso:   4050K .......... .......... .......... .......... ..........  7% 93.2M 3s[0m
+[0;32m    virtualbox-iso:   4100K .......... .......... .......... .......... ..........  7% 81.6M 3s[0m
+[0;32m    virtualbox-iso:   4150K .......... .......... .......... .......... ..........  7% 14.6M 3s[0m
+[0;32m    virtualbox-iso:   4200K .......... .......... .......... .......... ..........  7%  425M 3s[0m
+[0;32m    virtualbox-iso:   4250K .......... .......... .......... .......... ..........  7% 10.0M 3s[0m
+[0;32m    virtualbox-iso:   4300K .......... .......... .......... .......... ..........  7% 16.5M 3s[0m
+[0;32m    virtualbox-iso:   4350K .......... .......... .......... .......... ..........  7% 89.6M 3s[0m
+[0;32m    virtualbox-iso:   4400K .......... .......... .......... .......... ..........  7%  435M 3s[0m
+[0;32m    virtualbox-iso:   4450K .......... .......... .......... .......... ..........  7% 9.73M 3s[0m
+[0;32m    virtualbox-iso:   4500K .......... .......... .......... .......... ..........  8% 48.9M 3s[0m
+[0;32m    virtualbox-iso:   4550K .......... .......... .......... .......... ..........  8% 16.1M 3s[0m
+[0;32m    virtualbox-iso:   4600K .......... .......... .......... .......... ..........  8%  174M 3s[0m
+[0;32m    virtualbox-iso:   4650K .......... .......... .......... .......... ..........  8% 16.7M 3s[0m
+[0;32m    virtualbox-iso:   4700K .......... .......... .......... .......... ..........  8%  137M 3s[0m
+[0;32m    virtualbox-iso:   4750K .......... .......... .......... .......... ..........  8% 8.93M 3s[0m
+[0;32m    virtualbox-iso:   4800K .......... .......... .......... .......... ..........  8% 21.0M 3s[0m
+[0;32m    virtualbox-iso:   4850K .......... .......... .......... .......... ..........  8% 35.0M 3s[0m
+[0;32m    virtualbox-iso:   4900K .......... .......... .......... .......... ..........  8% 19.5M 3s[0m
+[0;32m    virtualbox-iso:   4950K .......... .......... .......... .......... ..........  8%  123M 3s[0m
+[0;32m    virtualbox-iso:   5000K .......... .......... .......... .......... ..........  8% 10.1M 3s[0m
+[0;32m    virtualbox-iso:   5050K .......... .......... .......... .......... ..........  9% 9.41M 3s[0m
+[0;32m    virtualbox-iso:   5100K .......... .......... .......... .......... ..........  9% 34.2M 3s[0m
+[0;32m    virtualbox-iso:   5150K .......... .......... .......... .......... ..........  9% 74.1M 3s[0m
+[0;32m    virtualbox-iso:   5200K .......... .......... .......... .......... ..........  9% 20.5M 3s[0m
+[0;32m    virtualbox-iso:   5250K .......... .......... .......... .......... ..........  9% 9.23M 3s[0m
+[0;32m    virtualbox-iso:   5300K .......... .......... .......... .......... ..........  9% 95.0M 3s[0m
+[0;32m    virtualbox-iso:   5350K .......... .......... .......... .......... ..........  9% 18.0M 3s[0m
+[0;32m    virtualbox-iso:   5400K .......... .......... .......... .......... ..........  9% 40.5M 3s[0m
+[0;32m    virtualbox-iso:   5450K .......... .......... .......... .......... ..........  9%  449M 3s[0m
+[0;32m    virtualbox-iso:   5500K .......... .......... .......... .......... ..........  9% 13.2M 3s[0m
+[0;32m    virtualbox-iso:   5550K .......... .......... .......... .......... ..........  9% 9.28M 3s[0m
+[0;32m    virtualbox-iso:   5600K .......... .......... .......... .......... ..........  9%  209M 3s[0m
+[0;32m    virtualbox-iso:   5650K .......... .......... .......... .......... .......... 10% 22.0M 3s[0m
+[0;32m    virtualbox-iso:   5700K .......... .......... .......... .......... .......... 10% 28.0M 3s[0m
+[0;32m    virtualbox-iso:   5750K .......... .......... .......... .......... .......... 10% 14.9M 3s[0m
+[0;32m    virtualbox-iso:   5800K .......... .......... .......... .......... .......... 10% 19.5M 3s[0m
+[0;32m    virtualbox-iso:   5850K .......... .......... .......... .......... .......... 10% 6.15M 3s[0m
+[0;32m    virtualbox-iso:   5900K .......... .......... .......... .......... .......... 10% 73.3M 3s[0m
+[0;32m    virtualbox-iso:   5950K .......... .......... .......... .......... .......... 10% 17.3M 3s[0m
+[0;32m    virtualbox-iso:   6000K .......... .......... .......... .......... .......... 10%  166M 3s[0m
+[0;32m    virtualbox-iso:   6050K .......... .......... .......... .......... .......... 10% 20.6M 3s[0m
+[0;32m    virtualbox-iso:   6100K .......... .......... .......... .......... .......... 10% 4.21M 3s[0m
+[0;32m    virtualbox-iso:   6150K .......... .......... .......... .......... .......... 10% 72.0M 3s[0m
+[0;32m    virtualbox-iso:   6200K .......... .......... .......... .......... .......... 11%  341M 3s[0m
+[0;32m    virtualbox-iso:   6250K .......... .......... .......... .......... .......... 11% 3.14M 3s[0m
+[0;32m    virtualbox-iso:   6300K .......... .......... .......... .......... .......... 11%  155M 3s[0m
+[0;32m    virtualbox-iso:   6350K .......... .......... .......... .......... .......... 11% 3.83M 3s[0m
+[0;32m    virtualbox-iso:   6400K .......... .......... .......... .......... .......... 11% 6.33M 3s[0m
+[0;32m    virtualbox-iso:   6450K .......... .......... .......... .......... .......... 11% 20.3M 3s[0m
+[0;32m    virtualbox-iso:   6500K .......... .......... .......... .......... .......... 11% 23.3M 3s[0m
+[0;32m    virtualbox-iso:   6550K .......... .......... .......... .......... .......... 11%  217M 3s[0m
+[0;32m    virtualbox-iso:   6600K .......... .......... .......... .......... .......... 11% 2.70M 3s[0m
+[0;32m    virtualbox-iso:   6650K .......... .......... .......... .......... .......... 11%  163M 3s[0m
+[0;32m    virtualbox-iso:   6700K .......... .......... .......... .......... .......... 11% 84.2M 3s[0m
+[0;32m    virtualbox-iso:   6750K .......... .......... .......... .......... .......... 12% 11.3M 3s[0m
+[0;32m    virtualbox-iso:   6800K .......... .......... .......... .......... .......... 12% 40.8M 3s[0m
+[0;32m    virtualbox-iso:   6850K .......... .......... .......... .......... .......... 12% 85.2M 3s[0m
+[0;32m    virtualbox-iso:   6900K .......... .......... .......... .......... .......... 12%  371M 3s[0m
+[0;32m    virtualbox-iso:   6950K .......... .......... .......... .......... .......... 12%  435M 3s[0m
+[0;32m    virtualbox-iso:   7000K .......... .......... .......... .......... .......... 12%  447M 3s[0m
+[0;32m    virtualbox-iso:   7050K .......... .......... .......... .......... .......... 12% 4.42M 3s[0m
+[0;32m    virtualbox-iso:   7100K .......... .......... .......... .......... .......... 12% 50.4M 3s[0m
+[0;32m    virtualbox-iso:   7150K .......... .......... .......... .......... .......... 12% 91.7M 3s[0m
+[0;32m    virtualbox-iso:   7200K .......... .......... .......... .......... .......... 12%  218M 3s[0m
+[0;32m    virtualbox-iso:   7250K .......... .......... .......... .......... .......... 12%  463M 3s[0m
+[0;32m    virtualbox-iso:   7300K .......... .......... .......... .......... .......... 12%  399M 3s[0m
+[0;32m    virtualbox-iso:   7350K .......... .......... .......... .......... .......... 13% 8.79M 3s[0m
+[0;32m    virtualbox-iso:   7400K .......... .......... .......... .......... .......... 13%  420M 3s[0m
+[0;32m    virtualbox-iso:   7450K .......... .......... .......... .......... .......... 13% 11.7M 3s[0m
+[0;32m    virtualbox-iso:   7500K .......... .......... .......... .......... .......... 13%  184M 3s[0m
+[0;32m    virtualbox-iso:   7550K .......... .......... .......... .......... .......... 13% 38.6M 3s[0m
+[0;32m    virtualbox-iso:   7600K .......... .......... .......... .......... .......... 13% 9.23M 3s[0m
+[0;32m    virtualbox-iso:   7650K .......... .......... .......... .......... .......... 13% 34.1M 3s[0m
+[0;32m    virtualbox-iso:   7700K .......... .......... .......... .......... .......... 13% 14.8M 3s[0m
+[0;32m    virtualbox-iso:   7750K .......... .......... .......... .......... .......... 13% 44.4M 3s[0m
+[0;32m    virtualbox-iso:   7800K .......... .......... .......... .......... .......... 13% 5.55M 3s[0m
+[0;32m    virtualbox-iso:   7850K .......... .......... .......... .......... .......... 13%  137M 3s[0m
+[0;32m    virtualbox-iso:   7900K .......... .......... .......... .......... .......... 14% 24.9M 3s[0m
+[0;32m    virtualbox-iso:   7950K .......... .......... .......... .......... .......... 14% 3.42M 3s[0m
+[0;32m    virtualbox-iso:   8000K .......... .......... .......... .......... .......... 14% 28.7M 3s[0m
+[0;32m    virtualbox-iso:   8050K .......... .......... .......... .......... .......... 14% 98.4M 3s[0m
+[0;32m    virtualbox-iso:   8100K .......... .......... .......... .......... .......... 14% 13.0M 3s[0m
+[0;32m    virtualbox-iso:   8150K .......... .......... .......... .......... .......... 14% 6.24M 3s[0m
+[0;32m    virtualbox-iso:   8200K .......... .......... .......... .......... .......... 14%  106M 3s[0m
+[0;32m    virtualbox-iso:   8250K .......... .......... .......... .......... .......... 14% 17.3M 3s[0m
+[0;32m    virtualbox-iso:   8300K .......... .......... .......... .......... .......... 14%  429M 3s[0m
+[0;32m    virtualbox-iso:   8350K .......... .......... .......... .......... .......... 14% 4.63M 3s[0m
+[0;32m    virtualbox-iso:   8400K .......... .......... .......... .......... .......... 14% 34.1M 3s[0m
+[0;32m    virtualbox-iso:   8450K .......... .......... .......... .......... .......... 15% 38.6M 3s[0m
+[0;32m    virtualbox-iso:   8500K .......... .......... .......... .......... .......... 15% 40.8M 3s[0m
+[0;32m    virtualbox-iso:   8550K .......... .......... .......... .......... .......... 15% 37.8M 3s[0m
+[0;32m    virtualbox-iso:   8600K .......... .......... .......... .......... .......... 15% 10.4M 3s[0m
+[0;32m    virtualbox-iso:   8650K .......... .......... .......... .......... .......... 15% 2.94M 3s[0m
+[0;32m    virtualbox-iso:   8700K .......... .......... .......... .......... .......... 15% 63.3M 3s[0m
+[0;32m    virtualbox-iso:   8750K .......... .......... .......... .......... .......... 15% 88.3M 3s[0m
+[0;32m    virtualbox-iso:   8800K .......... .......... .......... .......... .......... 15%  103M 3s[0m
+[0;32m    virtualbox-iso:   8850K .......... .......... .......... .......... .......... 15%  114M 3s[0m
+[0;32m    virtualbox-iso:   8900K .......... .......... .......... .......... .......... 15%  260M 3s[0m
+[0;32m    virtualbox-iso:   8950K .......... .......... .......... .......... .......... 15% 11.8M 3s[0m
+[0;32m    virtualbox-iso:   9000K .......... .......... .......... .......... .......... 15%  337M 3s[0m
+[0;32m    virtualbox-iso:   9050K .......... .......... .......... .......... .......... 16%  264M 3s[0m
+[0;32m    virtualbox-iso:   9100K .......... .......... .......... .......... .......... 16% 28.5M 3s[0m
+[0;32m    virtualbox-iso:   9150K .......... .......... .......... .......... .......... 16%  484M 3s[0m
+[0;32m    virtualbox-iso:   9200K .......... .......... .......... .......... .......... 16% 5.59M 3s[0m
+[0;32m    virtualbox-iso:   9250K .......... .......... .......... .......... .......... 16% 13.8M 3s[0m
+[0;32m    virtualbox-iso:   9300K .......... .......... .......... .......... .......... 16%  464M 3s[0m
+[0;32m    virtualbox-iso:   9350K .......... .......... .......... .......... .......... 16% 35.1M 3s[0m
+[0;32m    virtualbox-iso:   9400K .......... .......... .......... .......... .......... 16% 63.6M 3s[0m
+[0;32m    virtualbox-iso:   9450K .......... .......... .......... .......... .......... 16% 30.6M 3s[0m
+[0;32m    virtualbox-iso:   9500K .......... .......... .......... .......... .......... 16% 4.19M 3s[0m
+[0;32m    virtualbox-iso:   9550K .......... .......... .......... .......... .......... 16% 45.9M 3s[0m
+[0;32m    virtualbox-iso:   9600K .......... .......... .......... .......... .......... 17%  203M 3s[0m
+[0;32m    virtualbox-iso:   9650K .......... .......... .......... .......... .......... 17%  224M 3s[0m
+[0;32m    virtualbox-iso:   9700K .......... .......... .......... .......... .......... 17%  232M 3s[0m
+[0;32m    virtualbox-iso:   9750K .......... .......... .......... .......... .......... 17% 9.01M 3s[0m
+[0;32m    virtualbox-iso:   9800K .......... .......... .......... .......... .......... 17% 15.3M 3s[0m
+[0;32m    virtualbox-iso:   9850K .......... .......... .......... .......... .......... 17% 30.2M 3s[0m
+[0;32m    virtualbox-iso:   9900K .......... .......... .......... .......... .......... 17% 29.9M 3s[0m
+[0;32m    virtualbox-iso:   9950K .......... .......... .......... .......... .......... 17% 23.1M 3s[0m
+[0;32m    virtualbox-iso:  10000K .......... .......... .......... .......... .......... 17% 14.2M 3s[0m
+[0;32m    virtualbox-iso:  10050K .......... .......... .......... .......... .......... 17% 21.2M 3s[0m
+[0;32m    virtualbox-iso:  10100K .......... .......... .......... .......... .......... 17%  137M 3s[0m
+[0;32m    virtualbox-iso:  10150K .......... .......... .......... .......... .......... 18% 27.1M 3s[0m
+[0;32m    virtualbox-iso:  10200K .......... .......... .......... .......... .......... 18% 19.8M 3s[0m
+[0;32m    virtualbox-iso:  10250K .......... .......... .......... .......... .......... 18% 24.8M 3s[0m
+[0;32m    virtualbox-iso:  10300K .......... .......... .......... .......... .......... 18% 20.0M 3s[0m
+[0;32m    virtualbox-iso:  10350K .......... .......... .......... .......... .......... 18% 46.9M 3s[0m
+[0;32m    virtualbox-iso:  10400K .......... .......... .......... .......... .......... 18% 29.6M 3s[0m
+[0;32m    virtualbox-iso:  10450K .......... .......... .......... .......... .......... 18% 19.3M 3s[0m
+[0;32m    virtualbox-iso:  10500K .......... .......... .......... .......... .......... 18% 13.2M 3s[0m
+[0;32m    virtualbox-iso:  10550K .......... .......... .......... .......... .......... 18% 27.2M 3s[0m
+[0;32m    virtualbox-iso:  10600K .......... .......... .......... .......... .......... 18% 18.3M 3s[0m
+[0;32m    virtualbox-iso:  10650K .......... .......... .......... .......... .......... 18% 22.3M 3s[0m
+[0;32m    virtualbox-iso:  10700K .......... .......... .......... .......... .......... 18% 7.81M 3s[0m
+[0;32m    virtualbox-iso:  10750K .......... .......... .......... .......... .......... 19% 13.5M 3s[0m
+[0;32m    virtualbox-iso:  10800K .......... .......... .......... .......... .......... 19%  154M 3s[0m
+[0;32m    virtualbox-iso:  10850K .......... .......... .......... .......... .......... 19%  114M 3s[0m
+[0;32m    virtualbox-iso:  10900K .......... .......... .......... .......... .......... 19%  478M 3s[0m
+[0;32m    virtualbox-iso:  10950K .......... .......... .......... .......... .......... 19%  545M 3s[0m
+[0;32m    virtualbox-iso:  11000K .......... .......... .......... .......... .......... 19% 10.2M 3s[0m
+[0;32m    virtualbox-iso:  11050K .......... .......... .......... .......... .......... 19%  184M 3s[0m
+[0;32m    virtualbox-iso:  11100K .......... .......... .......... .......... .......... 19% 19.6M 2s[0m
+[0;32m    virtualbox-iso:  11150K .......... .......... .......... .......... .......... 19%  200M 2s[0m
+[0;32m    virtualbox-iso:  11200K .......... .......... .......... .......... .......... 19%  546M 2s[0m
+[0;32m    virtualbox-iso:  11250K .......... .......... .......... .......... .......... 19% 11.9M 2s[0m
+[0;32m    virtualbox-iso:  11300K .......... .......... .......... .......... .......... 20%  178M 2s[0m
+[0;32m    virtualbox-iso:  11350K .......... .......... .......... .......... .......... 20% 12.2M 2s[0m
+[0;32m    virtualbox-iso:  11400K .......... .......... .......... .......... .......... 20%  125M 2s[0m
+[0;32m    virtualbox-iso:  11450K .......... .......... .......... .......... .......... 20%  555M 2s[0m
+[0;32m    virtualbox-iso:  11500K .......... .......... .......... .......... .......... 20% 9.53M 2s[0m
+[0;32m    virtualbox-iso:  11550K .......... .......... .......... .......... .......... 20% 6.57M 2s[0m
+[0;32m    virtualbox-iso:  11600K .......... .......... .......... .......... .......... 20%  141M 2s[0m
+[0;32m    virtualbox-iso:  11650K .......... .......... .......... .......... .......... 20% 17.2M 2s[0m
+[0;32m    virtualbox-iso:  11700K .......... .......... .......... .......... .......... 20%  257M 2s[0m
+[0;32m    virtualbox-iso:  11750K .......... .......... .......... .......... .......... 20% 13.9M 2s[0m
+[0;32m    virtualbox-iso:  11800K .......... .......... .......... .......... .......... 20%  105M 2s[0m
+[0;32m    virtualbox-iso:  11850K .......... .......... .......... .......... .......... 21%  539M 2s[0m
+[0;32m    virtualbox-iso:  11900K .......... .......... .......... .......... .......... 21% 19.0M 2s[0m
+[0;32m    virtualbox-iso:  11950K .......... .......... .......... .......... .......... 21%  438M 2s[0m
+[0;32m    virtualbox-iso:  12000K .......... .......... .......... .......... .......... 21% 21.6M 2s[0m
+[0;32m    virtualbox-iso:  12050K .......... .......... .......... .......... .......... 21%  504M 2s[0m
+[0;32m    virtualbox-iso:  12100K .......... .......... .......... .......... .......... 21% 32.7M 2s[0m
+[0;32m    virtualbox-iso:  12150K .......... .......... .......... .......... .......... 21% 36.6M 2s[0m
+[0;32m    virtualbox-iso:  12200K .......... .......... .......... .......... .......... 21% 30.6M 2s[0m
+[0;32m    virtualbox-iso:  12250K .......... .......... .......... .......... .......... 21% 15.0M 2s[0m
+[0;32m    virtualbox-iso:  12300K .......... .......... .......... .......... .......... 21% 23.1M 2s[0m
+[0;32m    virtualbox-iso:  12350K .......... .......... .......... .......... .......... 21% 13.5M 2s[0m
+[0;32m    virtualbox-iso:  12400K .......... .......... .......... .......... .......... 21%  279M 2s[0m
+[0;32m    virtualbox-iso:  12450K .......... .......... .......... .......... .......... 22%  590M 2s[0m
+[0;32m    virtualbox-iso:  12500K .......... .......... .......... .......... .......... 22% 2.76M 2s[0m
+[0;32m    virtualbox-iso:  12550K .......... .......... .......... .......... .......... 22% 20.8M 2s[0m
+[0;32m    virtualbox-iso:  12600K .......... .......... .......... .......... .......... 22% 90.1M 2s[0m
+[0;32m    virtualbox-iso:  12650K .......... .......... .......... .......... .......... 22%  254M 2s[0m
+[0;32m    virtualbox-iso:  12700K .......... .......... .......... .......... .......... 22% 86.0M 2s[0m
+[0;32m    virtualbox-iso:  12750K .......... .......... .......... .......... .......... 22% 21.5M 2s[0m
+[0;32m    virtualbox-iso:  12800K .......... .......... .......... .......... .......... 22% 56.2M 2s[0m
+[0;32m    virtualbox-iso:  12850K .......... .......... .......... .......... .......... 22% 15.6M 2s[0m
+[0;32m    virtualbox-iso:  12900K .......... .......... .......... .......... .......... 22%  439M 2s[0m
+[0;32m    virtualbox-iso:  12950K .......... .......... .......... .......... .......... 22% 28.4M 2s[0m
+[0;32m    virtualbox-iso:  13000K .......... .......... .......... .......... .......... 23%  115M 2s[0m
+[0;32m    virtualbox-iso:  13050K .......... .......... .......... .......... .......... 23% 9.25M 2s[0m
+[0;32m    virtualbox-iso:  13100K .......... .......... .......... .......... .......... 23%  144M 2s[0m
+[0;32m    virtualbox-iso:  13150K .......... .......... .......... .......... .......... 23% 30.5M 2s[0m
+[0;32m    virtualbox-iso:  13200K .......... .......... .......... .......... .......... 23% 33.3M 2s[0m
+[0;32m    virtualbox-iso:  13250K .......... .......... .......... .......... .......... 23% 11.3M 2s[0m
+[0;32m    virtualbox-iso:  13300K .......... .......... .......... .......... .......... 23% 29.6M 2s[0m
+[0;32m    virtualbox-iso:  13350K .......... .......... .......... .......... .......... 23%  309M 2s[0m
+[0;32m    virtualbox-iso:  13400K .......... .......... .......... .......... .......... 23% 30.7M 2s[0m
+[0;32m    virtualbox-iso:  13450K .......... .......... .......... .......... .......... 23% 9.11M 2s[0m
+[0;32m    virtualbox-iso:  13500K .......... .......... .......... .......... .......... 23% 24.1M 2s[0m
+[0;32m    virtualbox-iso:  13550K .......... .......... .......... .......... .......... 24% 7.63M 2s[0m
+[0;32m    virtualbox-iso:  13600K .......... .......... .......... .......... .......... 24% 77.8M 2s[0m
+[0;32m    virtualbox-iso:  13650K .......... .......... .......... .......... .......... 24%  518M 2s[0m
+[0;32m    virtualbox-iso:  13700K .......... .......... .......... .......... .......... 24%  457M 2s[0m
+[0;32m    virtualbox-iso:  13750K .......... .......... .......... .......... .......... 24%  550M 2s[0m
+[0;32m    virtualbox-iso:  13800K .......... .......... .......... .......... .......... 24% 6.81M 2s[0m
+[0;32m    virtualbox-iso:  13850K .......... .......... .......... .......... .......... 24%  195M 2s[0m
+[0;32m    virtualbox-iso:  13900K .......... .......... .......... .......... .......... 24%  128M 2s[0m
+[0;32m    virtualbox-iso:  13950K .......... .......... .......... .......... .......... 24%  259M 2s[0m
+[0;32m    virtualbox-iso:  14000K .......... .......... .......... .......... .......... 24% 8.88M 2s[0m
+[0;32m    virtualbox-iso:  14050K .......... .......... .......... .......... .......... 24% 53.7M 2s[0m
+[0;32m    virtualbox-iso:  14100K .......... .......... .......... .......... .......... 24%  180M 2s[0m
+[0;32m    virtualbox-iso:  14150K .......... .......... .......... .......... .......... 25%  454M 2s[0m
+[0;32m    virtualbox-iso:  14200K .......... .......... .......... .......... .......... 25%  557M 2s[0m
+[0;32m    virtualbox-iso:  14250K .......... .......... .......... .......... .......... 25%  539M 2s[0m
+[0;32m    virtualbox-iso:  14300K .......... .......... .......... .......... .......... 25% 9.44M 2s[0m
+[0;32m    virtualbox-iso:  14350K .......... .......... .......... .......... .......... 25% 79.1M 2s[0m
+[0;32m    virtualbox-iso:  14400K .......... .......... .......... .......... .......... 25% 20.0M 2s[0m
+[0;32m    virtualbox-iso:  14450K .......... .......... .......... .......... .......... 25%  171M 2s[0m
+[0;32m    virtualbox-iso:  14500K .......... .......... .......... .......... .......... 25%  480M 2s[0m
+[0;32m    virtualbox-iso:  14550K .......... .......... .......... .......... .......... 25% 6.52M 2s[0m
+[0;32m    virtualbox-iso:  14600K .......... .......... .......... .......... .......... 25% 67.7M 2s[0m
+[0;32m    virtualbox-iso:  14650K .......... .......... .......... .......... .......... 25%  137M 2s[0m
+[0;32m    virtualbox-iso:  14700K .......... .......... .......... .......... .......... 26% 73.7M 2s[0m
+[0;32m    virtualbox-iso:  14750K .......... .......... .......... .......... .......... 26%  527M 2s[0m
+[0;32m    virtualbox-iso:  14800K .......... .......... .......... .......... .......... 26% 6.82M 2s[0m
+[0;32m    virtualbox-iso:  14850K .......... .......... .......... .......... .......... 26%  118M 2s[0m
+[0;32m    virtualbox-iso:  14900K .......... .......... .......... .......... .......... 26%  523M 2s[0m
+[0;32m    virtualbox-iso:  14950K .......... .......... .......... .......... .......... 26% 29.9M 2s[0m
+[0;32m    virtualbox-iso:  15000K .......... .......... .......... .......... .......... 26%  123M 2s[0m
+[0;32m    virtualbox-iso:  15050K .......... .......... .......... .......... .......... 26% 3.33M 2s[0m
+[0;32m    virtualbox-iso:  15100K .......... .......... .......... .......... .......... 26% 98.4M 2s[0m
+[0;32m    virtualbox-iso:  15150K .......... .......... .......... .......... .......... 26%  513M 2s[0m
+[0;32m    virtualbox-iso:  15200K .......... .......... .......... .......... .......... 26% 27.5M 2s[0m
+[0;32m    virtualbox-iso:  15250K .......... .......... .......... .......... .......... 27% 3.70M 2s[0m
+[0;32m    virtualbox-iso:  15300K .......... .......... .......... .......... .......... 27% 34.7M 2s[0m
+[0;32m    virtualbox-iso:  15350K .......... .......... .......... .......... .......... 27%  143M 2s[0m
+[0;32m    virtualbox-iso:  15400K .......... .......... .......... .......... .......... 27%  421M 2s[0m
+[0;32m    virtualbox-iso:  15450K .......... .......... .......... .......... .......... 27% 9.39M 2s[0m
+[0;32m    virtualbox-iso:  15500K .......... .......... .......... .......... .......... 27% 6.44M 2s[0m
+[0;32m    virtualbox-iso:  15550K .......... .......... .......... .......... .......... 27% 81.0M 2s[0m
+[0;32m    virtualbox-iso:  15600K .......... .......... .......... .......... .......... 27%  305M 2s[0m
+[0;32m    virtualbox-iso:  15650K .......... .......... .......... .......... .......... 27% 8.83M 2s[0m
+[0;32m    virtualbox-iso:  15700K .......... .......... .......... .......... .......... 27%  229M 2s[0m
+[0;32m    virtualbox-iso:  15750K .......... .......... .......... .......... .......... 27% 5.04M 2s[0m
+[0;32m    virtualbox-iso:  15800K .......... .......... .......... .......... .......... 27%  171M 2s[0m
+[0;32m    virtualbox-iso:  15850K .......... .......... .......... .......... .......... 28% 23.4M 2s[0m
+[0;32m    virtualbox-iso:  15900K .......... .......... .......... .......... .......... 28% 14.2M 2s[0m
+[0;32m    virtualbox-iso:  15950K .......... .......... .......... .......... .......... 28%  412M 2s[0m
+[0;32m    virtualbox-iso:  16000K .......... .......... .......... .......... .......... 28% 5.40M 2s[0m
+[0;32m    virtualbox-iso:  16050K .......... .......... .......... .......... .......... 28% 48.2M 2s[0m
+[0;32m    virtualbox-iso:  16100K .......... .......... .......... .......... .......... 28%  102M 2s[0m
+[0;32m    virtualbox-iso:  16150K .......... .......... .......... .......... .......... 28% 8.87M 2s[0m
+[0;32m    virtualbox-iso:  16200K .......... .......... .......... .......... .......... 28%  136M 2s[0m
+[0;32m    virtualbox-iso:  16250K .......... .......... .......... .......... .......... 28% 5.98M 2s[0m
+[0;32m    virtualbox-iso:  16300K .......... .......... .......... .......... .......... 28%  156M 2s[0m
+[0;32m    virtualbox-iso:  16350K .......... .......... .......... .......... .......... 28% 34.7M 2s[0m
+[0;32m    virtualbox-iso:  16400K .......... .......... .......... .......... .......... 29% 44.7M 2s[0m
+[0;32m    virtualbox-iso:  16450K .......... .......... .......... .......... .......... 29% 66.4M 2s[0m
+[0;32m    virtualbox-iso:  16500K .......... .......... .......... .......... .......... 29% 3.87M 2s[0m
+[0;32m    virtualbox-iso:  16550K .......... .......... .......... .......... .......... 29% 89.7M 2s[0m
+[0;32m    virtualbox-iso:  16600K .......... .......... .......... .......... .......... 29%  454M 2s[0m
+[0;32m    virtualbox-iso:  16650K .......... .......... .......... .......... .......... 29% 16.7M 2s[0m
+[0;32m    virtualbox-iso:  16700K .......... .......... .......... .......... .......... 29%  112M 2s[0m
+[0;32m    virtualbox-iso:  16750K .......... .......... .......... .......... .......... 29%  496M 2s[0m
+[0;32m    virtualbox-iso:  16800K .......... .......... .......... .......... .......... 29% 4.06M 2s[0m
+[0;32m    virtualbox-iso:  16850K .......... .......... .......... .......... .......... 29%  238M 2s[0m
+[0;32m    virtualbox-iso:  16900K .......... .......... .......... .......... .......... 29% 7.77M 2s[0m
+[0;32m    virtualbox-iso:  16950K .......... .......... .......... .......... .......... 30% 45.2M 2s[0m
+[0;32m    virtualbox-iso:  17000K .......... .......... .......... .......... .......... 30%  447M 2s[0m
+[0;32m    virtualbox-iso:  17050K .......... .......... .......... .......... .......... 30% 5.82M 2s[0m
+[0;32m    virtualbox-iso:  17100K .......... .......... .......... .......... .......... 30%  227M 2s[0m
+[0;32m    virtualbox-iso:  17150K .......... .......... .......... .......... .......... 30%  529M 2s[0m
+[0;32m    virtualbox-iso:  17200K .......... .......... .......... .......... .......... 30% 16.5M 2s[0m
+[0;32m    virtualbox-iso:  17250K .......... .......... .......... .......... .......... 30%  483M 2s[0m
+[0;32m    virtualbox-iso:  17300K .......... .......... .......... .......... .......... 30% 4.53M 2s[0m
+[0;32m    virtualbox-iso:  17350K .......... .......... .......... .......... .......... 30% 45.8M 2s[0m
+[0;32m    virtualbox-iso:  17400K .......... .......... .......... .......... .......... 30% 10.5M 2s[0m
+[0;32m    virtualbox-iso:  17450K .......... .......... .......... .......... .......... 30% 39.5M 2s[0m
+[0;32m    virtualbox-iso:  17500K .......... .......... .......... .......... .......... 30% 80.3M 2s[0m
+[0;32m    virtualbox-iso:  17550K .......... .......... .......... .......... .......... 31% 5.88M 2s[0m
+[0;32m    virtualbox-iso:  17600K .......... .......... .......... .......... .......... 31% 6.85M 2s[0m
+[0;32m    virtualbox-iso:  17650K .......... .......... .......... .......... .......... 31%  106M 2s[0m
+[0;32m    virtualbox-iso:  17700K .......... .......... .......... .......... .......... 31%  349M 2s[0m
+[0;32m    virtualbox-iso:  17750K .......... .......... .......... .......... .......... 31%  476M 2s[0m
+[0;32m    virtualbox-iso:  17800K .......... .......... .......... .......... .......... 31% 7.00M 2s[0m
+[0;32m    virtualbox-iso:  17850K .......... .......... .......... .......... .......... 31%  420M 2s[0m
+[0;32m    virtualbox-iso:  17900K .......... .......... .......... .......... .......... 31% 12.3M 2s[0m
+[0;32m    virtualbox-iso:  17950K .......... .......... .......... .......... .......... 31%  156M 2s[0m
+[0;32m    virtualbox-iso:  18000K .......... .......... .......... .......... .......... 31%  483M 2s[0m
+[0;32m    virtualbox-iso:  18050K .......... .......... .......... .......... .......... 31% 4.54M 2s[0m
+[0;32m    virtualbox-iso:  18100K .......... .......... .......... .......... .......... 32%  229M 2s[0m
+[0;32m    virtualbox-iso:  18150K .......... .......... .......... .......... .......... 32%  496M 2s[0m
+[0;32m    virtualbox-iso:  18200K .......... .......... .......... .......... .......... 32% 48.1M 2s[0m
+[0;32m    virtualbox-iso:  18250K .......... .......... .......... .......... .......... 32%  343M 2s[0m
+[0;32m    virtualbox-iso:  18300K .......... .......... .......... .......... .......... 32% 3.67M 2s[0m
+[0;32m    virtualbox-iso:  18350K .......... .......... .......... .......... .......... 32% 51.6M 2s[0m
+[0;32m    virtualbox-iso:  18400K .......... .......... .......... .......... .......... 32% 30.9M 2s[0m
+[0;32m    virtualbox-iso:  18450K .......... .......... .......... .......... .......... 32%  242M 2s[0m
+[0;32m    virtualbox-iso:  18500K .......... .......... .......... .......... .......... 32%  393M 2s[0m
+[0;32m    virtualbox-iso:  18550K .......... .......... .......... .......... .......... 32% 3.71M 2s[0m
+[0;32m    virtualbox-iso:  18600K .......... .......... .......... .......... .......... 32%  156M 2s[0m
+[0;32m    virtualbox-iso:  18650K .......... .......... .......... .......... .......... 33%  134M 2s[0m
+[0;32m    virtualbox-iso:  18700K .......... .......... .......... .......... .......... 33% 19.9M 2s[0m
+[0;32m    virtualbox-iso:  18750K .......... .......... .......... .......... .......... 33%  144M 2s[0m
+[0;32m    virtualbox-iso:  18800K .......... .......... .......... .......... .......... 33% 3.46M 2s[0m
+[0;32m    virtualbox-iso:  18850K .......... .......... .......... .......... .......... 33% 23.9M 2s[0m
+[0;32m    virtualbox-iso:  18900K .......... .......... .......... .......... .......... 33%  177M 2s[0m
+[0;32m    virtualbox-iso:  18950K .......... .......... .......... .......... .......... 33%  361M 2s[0m
+[0;32m    virtualbox-iso:  19000K .......... .......... .......... .......... .......... 33%  471M 2s[0m
+[0;32m    virtualbox-iso:  19050K .......... .......... .......... .......... .......... 33% 5.10M 2s[0m
+[0;32m    virtualbox-iso:  19100K .......... .......... .......... .......... .......... 33%  117M 2s[0m
+[0;32m    virtualbox-iso:  19150K .......... .......... .......... .......... .......... 33% 32.5M 2s[0m
+[0;32m    virtualbox-iso:  19200K .......... .......... .......... .......... .......... 34% 9.42M 2s[0m
+[0;32m    virtualbox-iso:  19250K .......... .......... .......... .......... .......... 34%  204M 2s[0m
+[0;32m    virtualbox-iso:  19300K .......... .......... .......... .......... .......... 34%  503M 2s[0m
+[0;32m    virtualbox-iso:  19350K .......... .......... .......... .......... .......... 34% 4.43M 2s[0m
+[0;32m    virtualbox-iso:  19400K .......... .......... .......... .......... .......... 34%  454M 2s[0m
+[0;32m    virtualbox-iso:  19450K .......... .......... .......... .......... .......... 34%  406M 2s[0m
+[0;32m    virtualbox-iso:  19500K .......... .......... .......... .......... .......... 34%  489M 2s[0m
+[0;32m    virtualbox-iso:  19550K .......... .......... .......... .......... .......... 34% 42.6M 2s[0m
+[0;32m    virtualbox-iso:  19600K .......... .......... .......... .......... .......... 34% 3.85M 2s[0m
+[0;32m    virtualbox-iso:  19650K .......... .......... .......... .......... .......... 34% 57.7M 2s[0m
+[0;32m    virtualbox-iso:  19700K .......... .......... .......... .......... .......... 34% 15.0M 2s[0m
+[0;32m    virtualbox-iso:  19750K .......... .......... .......... .......... .......... 34%  123M 2s[0m
+[0;32m    virtualbox-iso:  19800K .......... .......... .......... .......... .......... 35%  430M 2s[0m
+[0;32m    virtualbox-iso:  19850K .......... .......... .......... .......... .......... 35% 3.81M 2s[0m
+[0;32m    virtualbox-iso:  19900K .......... .......... .......... .......... .......... 35% 35.3M 2s[0m
+[0;32m    virtualbox-iso:  19950K .......... .......... .......... .......... .......... 35%  411M 2s[0m
+[0;32m    virtualbox-iso:  20000K .......... .......... .......... .......... .......... 35%  477M 2s[0m
+[0;32m    virtualbox-iso:  20050K .......... .......... .......... .......... .......... 35% 19.8M 2s[0m
+[0;32m    virtualbox-iso:  20100K .......... .......... .......... .......... .......... 35% 5.03M 2s[0m
+[0;32m    virtualbox-iso:  20150K .......... .......... .......... .......... .......... 35%  115M 2s[0m
+[0;32m    virtualbox-iso:  20200K .......... .......... .......... .......... .......... 35% 51.7M 2s[0m
+[0;32m    virtualbox-iso:  20250K .......... .......... .......... .......... .......... 35% 23.8M 2s[0m
+[0;32m    virtualbox-iso:  20300K .......... .......... .......... .......... .......... 35%  414M 2s[0m
+[0;32m    virtualbox-iso:  20350K .......... .......... .......... .......... .......... 36% 3.68M 2s[0m
+[0;32m    virtualbox-iso:  20400K .......... .......... .......... .......... .......... 36%  140M 2s[0m
+[0;32m    virtualbox-iso:  20450K .......... .......... .......... .......... .......... 36%  454M 2s[0m
+[0;32m    virtualbox-iso:  20500K .......... .......... .......... .......... .......... 36% 17.2M 2s[0m
+[0;32m    virtualbox-iso:  20550K .......... .......... .......... .......... .......... 36%  408M 2s[0m
+[0;32m    virtualbox-iso:  20600K .......... .......... .......... .......... .......... 36% 3.91M 2s[0m
+[0;32m    virtualbox-iso:  20650K .......... .......... .......... .......... .......... 36% 16.8M 2s[0m
+[0;32m    virtualbox-iso:  20700K .......... .......... .......... .......... .......... 36%  366M 2s[0m
+[0;32m    virtualbox-iso:  20750K .......... .......... .......... .......... .......... 36%  452M 2s[0m
+[0;32m    virtualbox-iso:  20800K .......... .......... .......... .......... .......... 36%  471M 2s[0m
+[0;32m    virtualbox-iso:  20850K .......... .......... .......... .......... .......... 36% 4.15M 2s[0m
+[0;32m    virtualbox-iso:  20900K .......... .......... .......... .......... .......... 37% 13.0M 2s[0m
+[0;32m    virtualbox-iso:  20950K .......... .......... .......... .......... .......... 37% 12.2M 2s[0m
+[0;32m    virtualbox-iso:  21000K .......... .......... .......... .......... .......... 37%  390M 2s[0m
+[0;32m    virtualbox-iso:  21050K .......... .......... .......... .......... .......... 37% 35.5M 2s[0m
+[0;32m    virtualbox-iso:  21100K .......... .......... .......... .......... .......... 37% 9.88M 2s[0m
+[0;32m    virtualbox-iso:  21150K .......... .......... .......... .......... .......... 37% 25.0M 2s[0m
+[0;32m    virtualbox-iso:  21200K .......... .......... .......... .......... .......... 37%  107M 2s[0m
+[0;32m    virtualbox-iso:  21250K .......... .......... .......... .......... .......... 37%  374M 2s[0m
+[0;32m    virtualbox-iso:  21300K .......... .......... .......... .......... .......... 37% 16.0M 2s[0m
+[0;32m    virtualbox-iso:  21350K .......... .......... .......... .......... .......... 37% 5.23M 2s[0m
+[0;32m    virtualbox-iso:  21400K .......... .......... .......... .......... .......... 37%  151M 2s[0m
+[0;32m    virtualbox-iso:  21450K .......... .......... .......... .......... .......... 37% 30.8M 2s[0m
+[0;32m    virtualbox-iso:  21500K .......... .......... .......... .......... .......... 38%  123M 2s[0m
+[0;32m    virtualbox-iso:  21550K .......... .......... .......... .......... .......... 38% 17.8M 2s[0m
+[0;32m    virtualbox-iso:  21600K .......... .......... .......... .......... .......... 38% 5.15M 2s[0m
+[0;32m    virtualbox-iso:  21650K .......... .......... .......... .......... .......... 38%  313M 2s[0m
+[0;32m    virtualbox-iso:  21700K .......... .......... .......... .......... .......... 38% 20.7M 2s[0m
+[0;32m    virtualbox-iso:  21750K .......... .......... .......... .......... .......... 38%  288M 2s[0m
+[0;32m    virtualbox-iso:  21800K .......... .......... .......... .......... .......... 38% 11.1M 2s[0m
+[0;32m    virtualbox-iso:  21850K .......... .......... .......... .......... .......... 38% 5.54M 2s[0m
+[0;32m    virtualbox-iso:  21900K .......... .......... .......... .......... .......... 38%  281M 2s[0m
+[0;32m    virtualbox-iso:  21950K .......... .......... .......... .......... .......... 38% 22.1M 2s[0m
+[0;32m    virtualbox-iso:  22000K .......... .......... .......... .......... .......... 38%  395M 2s[0m
+[0;32m    virtualbox-iso:  22050K .......... .......... .......... .......... .......... 39% 21.6M 2s[0m
+[0;32m    virtualbox-iso:  22100K .......... .......... .......... .......... .......... 39% 4.40M 2s[0m
+[0;32m    virtualbox-iso:  22150K .......... .......... .......... .......... .......... 39% 47.0M 2s[0m
+[0;32m    virtualbox-iso:  22200K .......... .......... .......... .......... .......... 39%  107M 2s[0m
+[0;32m    virtualbox-iso:  22250K .......... .......... .......... .......... .......... 39% 25.1M 2s[0m
+[0;32m    virtualbox-iso:  22300K .......... .......... .......... .......... .......... 39%  106M 2s[0m
+[0;32m    virtualbox-iso:  22350K .......... .......... .......... .......... .......... 39% 4.31M 2s[0m
+[0;32m    virtualbox-iso:  22400K .......... .......... .......... .......... .......... 39% 28.0M 2s[0m
+[0;32m    virtualbox-iso:  22450K .......... .......... .......... .......... .......... 39%  330M 2s[0m
+[0;32m    virtualbox-iso:  22500K .......... .......... .......... .......... .......... 39% 87.7M 2s[0m
+[0;32m    virtualbox-iso:  22550K .......... .......... .......... .......... .......... 39% 47.7M 2s[0m
+[0;32m    virtualbox-iso:  22600K .......... .......... .......... .......... .......... 40% 23.0M 2s[0m
+[0;32m    virtualbox-iso:  22650K .......... .......... .......... .......... .......... 40% 4.76M 2s[0m
+[0;32m    virtualbox-iso:  22700K .......... .......... .......... .......... .......... 40% 6.78M 2s[0m
+[0;32m    virtualbox-iso:  22750K .......... .......... .......... .......... .......... 40%  108M 2s[0m
+[0;32m    virtualbox-iso:  22800K .......... .......... .......... .......... .......... 40%  429M 2s[0m
+[0;32m    virtualbox-iso:  22850K .......... .......... .......... .......... .......... 40%  354M 2s[0m
+[0;32m    virtualbox-iso:  22900K .......... .......... .......... .......... .......... 40% 6.94M 2s[0m
+[0;32m    virtualbox-iso:  22950K .......... .......... .......... .......... .......... 40%  437M 2s[0m
+[0;32m    virtualbox-iso:  23000K .......... .......... .......... .......... .......... 40% 31.7M 2s[0m
+[0;32m    virtualbox-iso:  23050K .......... .......... .......... .......... .......... 40%  438M 2s[0m
+[0;32m    virtualbox-iso:  23100K .......... .......... .......... .......... .......... 40% 31.3M 2s[0m
+[0;32m    virtualbox-iso:  23150K .......... .......... .......... .......... .......... 40% 4.23M 2s[0m
+[0;32m    virtualbox-iso:  23200K .......... .......... .......... .......... .......... 41% 33.2M 2s[0m
+[0;32m    virtualbox-iso:  23250K .......... .......... .......... .......... .......... 41%  388M 2s[0m
+[0;32m    virtualbox-iso:  23300K .......... .......... .......... .......... .......... 41% 27.7M 2s[0m
+[0;32m    virtualbox-iso:  23350K .......... .......... .......... .......... .......... 41%  422M 2s[0m
+[0;32m    virtualbox-iso:  23400K .......... .......... .......... .......... .......... 41% 4.32M 2s[0m
+[0;32m    virtualbox-iso:  23450K .......... .......... .......... .......... .......... 41% 32.0M 2s[0m
+[0;32m    virtualbox-iso:  23500K .......... .......... .......... .......... .......... 41% 47.1M 2s[0m
+[0;32m    virtualbox-iso:  23550K .......... .......... .......... .......... .......... 41%  280M 2s[0m
+[0;32m    virtualbox-iso:  23600K .......... .......... .......... .......... .......... 41% 42.0M 2s[0m
+[0;32m    virtualbox-iso:  23650K .......... .......... .......... .......... .......... 41% 3.78M 2s[0m
+[0;32m    virtualbox-iso:  23700K .......... .......... .......... .......... .......... 41% 34.7M 2s[0m
+[0;32m    virtualbox-iso:  23750K .......... .......... .......... .......... .......... 42%  435M 2s[0m
+[0;32m    virtualbox-iso:  23800K .......... .......... .......... .......... .......... 42% 39.6M 2s[0m
+[0;32m    virtualbox-iso:  23850K .......... .......... .......... .......... .......... 42% 53.5M 2s[0m
+[0;32m    virtualbox-iso:  23900K .......... .......... .......... .......... .......... 42% 4.16M 2s[0m
+[0;32m    virtualbox-iso:  23950K .......... .......... .......... .......... .......... 42% 43.7M 2s[0m
+[0;32m    virtualbox-iso:  24000K .......... .......... .......... .......... .......... 42%  354M 2s[0m
+[0;32m    virtualbox-iso:  24050K .......... .......... .......... .......... .......... 42% 29.3M 2s[0m
+[0;32m    virtualbox-iso:  24100K .......... .......... .......... .......... .......... 42% 12.4M 2s[0m
+[0;32m    virtualbox-iso:  24150K .......... .......... .......... .......... .......... 42% 5.07M 2s[0m
+[0;32m    virtualbox-iso:  24200K .......... .......... .......... .......... .......... 42%  125M 2s[0m
+[0;32m    virtualbox-iso:  24250K .......... .......... .......... .......... .......... 42%  365M 2s[0m
+[0;32m    virtualbox-iso:  24300K .......... .......... .......... .......... .......... 43% 15.6M 2s[0m
+[0;32m    virtualbox-iso:  24350K .......... .......... .......... .......... .......... 43%  444M 2s[0m
+[0;32m    virtualbox-iso:  24400K .......... .......... .......... .......... .......... 43% 3.94M 2s[0m
+[0;32m    virtualbox-iso:  24450K .......... .......... .......... .......... .......... 43% 79.3M 2s[0m
+[0;32m    virtualbox-iso:  24500K .......... .......... .......... .......... .......... 43% 47.8M 2s[0m
+[0;32m    virtualbox-iso:  24550K .......... .......... .......... .......... .......... 43%  409M 2s[0m
+[0;32m    virtualbox-iso:  24600K .......... .......... .......... .......... .......... 43% 21.2M 2s[0m
+[0;32m    virtualbox-iso:  24650K .......... .......... .......... .......... .......... 43% 4.96M 2s[0m
+[0;32m    virtualbox-iso:  24700K .......... .......... .......... .......... .......... 43%  106M 2s[0m
+[0;32m    virtualbox-iso:  24750K .......... .......... .......... .......... .......... 43% 27.9M 2s[0m
+[0;32m    virtualbox-iso:  24800K .......... .......... .......... .......... .......... 43%  447M 2s[0m
+[0;32m    virtualbox-iso:  24850K .......... .......... .......... .......... .......... 43% 29.2M 2s[0m
+[0;32m    virtualbox-iso:  24900K .......... .......... .......... .......... .......... 44% 4.39M 2s[0m
+[0;32m    virtualbox-iso:  24950K .......... .......... .......... .......... .......... 44% 18.6M 2s[0m
+[0;32m    virtualbox-iso:  25000K .......... .......... .......... .......... .......... 44%  201M 2s[0m
+[0;32m    virtualbox-iso:  25050K .......... .......... .......... .......... .......... 44%  359M 2s[0m
+[0;32m    virtualbox-iso:  25100K .......... .......... .......... .......... .......... 44%  125M 2s[0m
+[0;32m    virtualbox-iso:  25150K .......... .......... .......... .......... .......... 44% 4.03M 2s[0m
+[0;32m    virtualbox-iso:  25200K .......... .......... .......... .......... .......... 44% 15.8M 2s[0m
+[0;32m    virtualbox-iso:  25250K .......... .......... .......... .......... .......... 44% 38.2M 2s[0m
+[0;32m    virtualbox-iso:  25300K .......... .......... .......... .......... .......... 44%  336M 2s[0m
+[0;32m    virtualbox-iso:  25350K .......... .......... .......... .......... .......... 44%  429M 2s[0m
+[0;32m    virtualbox-iso:  25400K .......... .......... .......... .......... .......... 44%  444M 2s[0m
+[0;32m    virtualbox-iso:  25450K .......... .......... .......... .......... .......... 45% 3.77M 2s[0m
+[0;32m    virtualbox-iso:  25500K .......... .......... .......... .......... .......... 45%  112M 2s[0m
+[0;32m    virtualbox-iso:  25550K .......... .......... .......... .......... .......... 45%  181M 2s[0m
+[0;32m    virtualbox-iso:  25600K .......... .......... .......... .......... .......... 45%  371M 2s[0m
+[0;32m    virtualbox-iso:  25650K .......... .......... .......... .......... .......... 45% 10.9M 2s[0m
+[0;32m    virtualbox-iso:  25700K .......... .......... .......... .......... .......... 45% 4.97M 2s[0m
+[0;32m    virtualbox-iso:  25750K .......... .......... .......... .......... .......... 45%  251M 2s[0m
+[0;32m    virtualbox-iso:  25800K .......... .......... .......... .......... .......... 45% 31.3M 2s[0m
+[0;32m    virtualbox-iso:  25850K .......... .......... .......... .......... .......... 45%  137M 2s[0m
+[0;32m    virtualbox-iso:  25900K .......... .......... .......... .......... .......... 45%  435M 2s[0m
+[0;32m    virtualbox-iso:  25950K .......... .......... .......... .......... .......... 45% 3.70M 2s[0m
+[0;32m    virtualbox-iso:  26000K .......... .......... .......... .......... .......... 46% 36.2M 2s[0m
+[0;32m    virtualbox-iso:  26050K .......... .......... .......... .......... .......... 46%  421M 2s[0m
+[0;32m    virtualbox-iso:  26100K .......... .......... .......... .......... .......... 46% 34.3M 2s[0m
+[0;32m    virtualbox-iso:  26150K .......... .......... .......... .......... .......... 46% 12.9M 2s[0m
+[0;32m    virtualbox-iso:  26200K .......... .......... .......... .......... .......... 46% 4.91M 2s[0m
+[0;32m    virtualbox-iso:  26250K .......... .......... .......... .......... .......... 46%  222M 2s[0m
+[0;32m    virtualbox-iso:  26300K .......... .......... .......... .......... .......... 46% 25.4M 2s[0m
+[0;32m    virtualbox-iso:  26350K .......... .......... .......... .......... .......... 46%  317M 2s[0m
+[0;32m    virtualbox-iso:  26400K .......... .......... .......... .......... .......... 46%  144M 2s[0m
+[0;32m    virtualbox-iso:  26450K .......... .......... .......... .......... .......... 46% 3.63M 2s[0m
+[0;32m    virtualbox-iso:  26500K .......... .......... .......... .......... .......... 46%  241M 2s[0m
+[0;32m    virtualbox-iso:  26550K .......... .......... .......... .......... .......... 46% 15.8M 2s[0m
+[0;32m    virtualbox-iso:  26600K .......... .......... .......... .......... .......... 47% 44.0M 2s[0m
+[0;32m    virtualbox-iso:  26650K .......... .......... .......... .......... .......... 47%  412M 2s[0m
+[0;32m    virtualbox-iso:  26700K .......... .......... .......... .......... .......... 47% 4.79M 2s[0m
+[0;32m    virtualbox-iso:  26750K .......... .......... .......... .......... .......... 47% 11.0M 2s[0m
+[0;32m    virtualbox-iso:  26800K .......... .......... .......... .......... .......... 47%  110M 2s[0m
+[0;32m    virtualbox-iso:  26850K .......... .......... .......... .......... .......... 47%  196M 2s[0m
+[0;32m    virtualbox-iso:  26900K .......... .......... .......... .......... .......... 47%  385M 2s[0m
+[0;32m    virtualbox-iso:  26950K .......... .......... .......... .......... .......... 47% 4.36M 2s[0m
+[0;32m    virtualbox-iso:  27000K .......... .......... .......... .......... .......... 47% 53.3M 2s[0m
+[0;32m    virtualbox-iso:  27050K .......... .......... .......... .......... .......... 47%  135M 2s[0m
+[0;32m    virtualbox-iso:  27100K .......... .......... .......... .......... .......... 47%  217M 2s[0m
+[0;32m    virtualbox-iso:  27150K .......... .......... .......... .......... .......... 48%  472M 2s[0m
+[0;32m    virtualbox-iso:  27200K .......... .......... .......... .......... .......... 48% 4.19M 2s[0m
+[0;32m    virtualbox-iso:  27250K .......... .......... .......... .......... .......... 48% 42.5M 2s[0m
+[0;32m    virtualbox-iso:  27300K .......... .......... .......... .......... .......... 48% 43.2M 2s[0m
+[0;32m    virtualbox-iso:  27350K .......... .......... .......... .......... .......... 48% 99.8M 2s[0m
+[0;32m    virtualbox-iso:  27400K .......... .......... .......... .......... .......... 48% 87.3M 2s[0m
+[0;32m    virtualbox-iso:  27450K .......... .......... .......... .......... .......... 48% 3.82M 2s[0m
+[0;32m    virtualbox-iso:  27500K .......... .......... .......... .......... .......... 48%  120M 2s[0m
+[0;32m    virtualbox-iso:  27550K .......... .......... .......... .......... .......... 48% 12.3M 2s[0m
+[0;32m    virtualbox-iso:  27600K .......... .......... .......... .......... .......... 48%  118M 2s[0m
+[0;32m    virtualbox-iso:  27650K .......... .......... .......... .......... .......... 48% 22.3M 2s[0m
+[0;32m    virtualbox-iso:  27700K .......... .......... .......... .......... .......... 49% 2.83M 2s[0m
+[0;32m    virtualbox-iso:  27750K .......... .......... .......... .......... .......... 49%  107M 2s[0m
+[0;32m    virtualbox-iso:  27800K .......... .......... .......... .......... .......... 49%  347M 2s[0m
+[0;32m    virtualbox-iso:  27850K .......... .......... .......... .......... .......... 49% 14.8M 2s[0m
+[0;32m    virtualbox-iso:  27900K .......... .......... .......... .......... .......... 49%  380M 2s[0m
+[0;32m    virtualbox-iso:  27950K .......... .......... .......... .......... .......... 49%  427M 2s[0m
+[0;32m    virtualbox-iso:  28000K .......... .......... .......... .......... .......... 49% 5.22M 2s[0m
+[0;32m    virtualbox-iso:  28050K .......... .......... .......... .......... .......... 49% 25.4M 2s[0m
+[0;32m    virtualbox-iso:  28100K .......... .......... .......... .......... .......... 49%  345M 2s[0m
+[0;32m    virtualbox-iso:  28150K .......... .......... .......... .......... .......... 49% 22.1M 2s[0m
+[0;32m    virtualbox-iso:  28200K .......... .......... .......... .......... .......... 49%  395M 2s[0m
+[0;32m    virtualbox-iso:  28250K .......... .......... .......... .......... .......... 49% 4.19M 2s[0m
+[0;32m    virtualbox-iso:  28300K .......... .......... .......... .......... .......... 50%  151M 2s[0m
+[0;32m    virtualbox-iso:  28350K .......... .......... .......... .......... .......... 50% 13.0M 2s[0m
+[0;32m    virtualbox-iso:  28400K .......... .......... .......... .......... .......... 50%  385M 2s[0m
+[0;32m    virtualbox-iso:  28450K .......... .......... .......... .......... .......... 50%  412M 2s[0m
+[0;32m    virtualbox-iso:  28500K .......... .......... .......... .......... .......... 50% 4.25M 2s[0m
+[0;32m    virtualbox-iso:  28550K .......... .......... .......... .......... .......... 50% 23.7M 2s[0m
+[0;32m    virtualbox-iso:  28600K .......... .......... .......... .......... .......... 50%  153M 2s[0m
+[0;32m    virtualbox-iso:  28650K .......... .......... .......... .......... .......... 50% 56.7M 2s[0m
+[0;32m    virtualbox-iso:  28700K .......... .......... .......... .......... .......... 50%  324M 2s[0m
+[0;32m    virtualbox-iso:  28750K .......... .......... .......... .......... .......... 50% 3.82M 2s[0m
+[0;32m    virtualbox-iso:  28800K .......... .......... .......... .......... .......... 50% 33.7M 2s[0m
+[0;32m    virtualbox-iso:  28850K .......... .......... .......... .......... .......... 51%  417M 2s[0m
+[0;32m    virtualbox-iso:  28900K .......... .......... .......... .......... .......... 51% 15.5M 2s[0m
+[0;32m    virtualbox-iso:  28950K .......... .......... .......... .......... .......... 51%  406M 2s[0m
+[0;32m    virtualbox-iso:  29000K .......... .......... .......... .......... .......... 51% 3.55M 2s[0m
+[0;32m    virtualbox-iso:  29050K .......... .......... .......... .......... .......... 51% 24.6M 2s[0m
+[0;32m    virtualbox-iso:  29100K .......... .......... .......... .......... .......... 51%  244M 2s[0m
+[0;32m    virtualbox-iso:  29150K .......... .......... .......... .......... .......... 51%  435M 2s[0m
+[0;32m    virtualbox-iso:  29200K .......... .......... .......... .......... .......... 51%  437M 2s[0m
+[0;32m    virtualbox-iso:  29250K .......... .......... .......... .......... .......... 51% 3.57M 2s[0m
+[0;32m    virtualbox-iso:  29300K .......... .......... .......... .......... .......... 51% 30.6M 2s[0m
+[0;32m    virtualbox-iso:  29350K .......... .......... .......... .......... .......... 51%  394M 2s[0m
+[0;32m    virtualbox-iso:  29400K .......... .......... .......... .......... .......... 52%  426M 2s[0m
+[0;32m    virtualbox-iso:  29450K .......... .......... .......... .......... .......... 52%  439M 2s[0m
+[0;32m    virtualbox-iso:  29500K .......... .......... .......... .......... .......... 52% 4.47M 2s[0m
+[0;32m    virtualbox-iso:  29550K .......... .......... .......... .......... .......... 52% 18.7M 2s[0m
+[0;32m    virtualbox-iso:  29600K .......... .......... .......... .......... .......... 52%  210M 2s[0m
+[0;32m    virtualbox-iso:  29650K .......... .......... .......... .......... .......... 52%  450M 2s[0m
+[0;32m    virtualbox-iso:  29700K .......... .......... .......... .......... .......... 52% 28.2M 2s[0m
+[0;32m    virtualbox-iso:  29750K .......... .......... .......... .......... .......... 52% 4.19M 2s[0m
+[0;32m    virtualbox-iso:  29800K .......... .......... .......... .......... .......... 52%  118M 2s[0m
+[0;32m    virtualbox-iso:  29850K .......... .......... .......... .......... .......... 52%  462M 2s[0m
+[0;32m    virtualbox-iso:  29900K .......... .......... .......... .......... .......... 52% 17.9M 2s[0m
+[0;32m    virtualbox-iso:  29950K .......... .......... .......... .......... .......... 52%  316M 2s[0m
+[0;32m    virtualbox-iso:  30000K .......... .......... .......... .......... .......... 53% 4.44M 2s[0m
+[0;32m    virtualbox-iso:  30050K .......... .......... .......... .......... .......... 53% 33.4M 2s[0m
+[0;32m    virtualbox-iso:  30100K .......... .......... .......... .......... .......... 53% 51.1M 1s[0m
+[0;32m    virtualbox-iso:  30150K .......... .......... .......... .......... .......... 53%  139M 1s[0m
+[0;32m    virtualbox-iso:  30200K .......... .......... .......... .......... .......... 53%  451M 1s[0m
+[0;32m    virtualbox-iso:  30250K .......... .......... .......... .......... .......... 53% 3.70M 1s[0m
+[0;32m    virtualbox-iso:  30300K .......... .......... .......... .......... .......... 53%  104M 1s[0m
+[0;32m    virtualbox-iso:  30350K .......... .......... .......... .......... .......... 53% 90.7M 1s[0m
+[0;32m    virtualbox-iso:  30400K .......... .......... .......... .......... .......... 53% 65.1M 1s[0m
+[0;32m    virtualbox-iso:  30450K .......... .......... .......... .......... .......... 53%  253M 1s[0m
+[0;32m    virtualbox-iso:  30500K .......... .......... .......... .......... .......... 53% 3.34M 1s[0m
+[0;32m    virtualbox-iso:  30550K .......... .......... .......... .......... .......... 54%  123M 1s[0m
+[0;32m    virtualbox-iso:  30600K .......... .......... .......... .......... .......... 54% 28.1M 1s[0m
+[0;32m    virtualbox-iso:  30650K .......... .......... .......... .......... .......... 54%  423M 1s[0m
+[0;32m    virtualbox-iso:  30700K .......... .......... .......... .......... .......... 54%  471M 1s[0m
+[0;32m    virtualbox-iso:  30750K .......... .......... .......... .......... .......... 54% 4.21M 1s[0m
+[0;32m    virtualbox-iso:  30800K .......... .......... .......... .......... .......... 54% 48.8M 1s[0m
+[0;32m    virtualbox-iso:  30850K .......... .......... .......... .......... .......... 54%  405M 1s[0m
+[0;32m    virtualbox-iso:  30900K .......... .......... .......... .......... .......... 54% 21.1M 1s[0m
+[0;32m    virtualbox-iso:  30950K .......... .......... .......... .......... .......... 54%  256M 1s[0m
+[0;32m    virtualbox-iso:  31000K .......... .......... .......... .......... .......... 54%  425M 1s[0m
+[0;32m    virtualbox-iso:  31050K .......... .......... .......... .......... .......... 54% 4.08M 1s[0m
+[0;32m    virtualbox-iso:  31100K .......... .......... .......... .......... .......... 55% 20.9M 1s[0m
+[0;32m    virtualbox-iso:  31150K .......... .......... .......... .......... .......... 55% 43.4M 1s[0m
+[0;32m    virtualbox-iso:  31200K .......... .......... .......... .......... .......... 55%  445M 1s[0m
+[0;32m    virtualbox-iso:  31250K .......... .......... .......... .......... .......... 55% 18.3M 1s[0m
+[0;32m    virtualbox-iso:  31300K .......... .......... .......... .......... .......... 55% 5.51M 1s[0m
+[0;32m    virtualbox-iso:  31350K .......... .......... .......... .......... .......... 55% 38.9M 1s[0m
+[0;32m    virtualbox-iso:  31400K .......... .......... .......... .......... .......... 55% 27.7M 1s[0m
+[0;32m    virtualbox-iso:  31450K .......... .......... .......... .......... .......... 55%  103M 1s[0m
+[0;32m    virtualbox-iso:  31500K .......... .......... .......... .......... .......... 55%  301M 1s[0m
+[0;32m    virtualbox-iso:  31550K .......... .......... .......... .......... .......... 55% 3.22M 1s[0m
+[0;32m    virtualbox-iso:  31600K .......... .......... .......... .......... .......... 55%  126M 1s[0m
+[0;32m    virtualbox-iso:  31650K .......... .......... .......... .......... .......... 55%  503M 1s[0m
+[0;32m    virtualbox-iso:  31700K .......... .......... .......... .......... .......... 56% 59.4M 1s[0m
+[0;32m    virtualbox-iso:  31750K .......... .......... .......... .......... .......... 56%  500M 1s[0m
+[0;32m    virtualbox-iso:  31800K .......... .......... .......... .......... .......... 56% 4.73M 1s[0m
+[0;32m    virtualbox-iso:  31850K .......... .......... .......... .......... .......... 56% 72.9M 1s[0m
+[0;32m    virtualbox-iso:  31900K .......... .......... .......... .......... .......... 56% 25.1M 1s[0m
+[0;32m    virtualbox-iso:  31950K .......... .......... .......... .......... .......... 56% 69.3M 1s[0m
+[0;32m    virtualbox-iso:  32000K .......... .......... .......... .......... .......... 56% 17.6M 1s[0m
+[0;32m    virtualbox-iso:  32050K .......... .......... .......... .......... .......... 56% 5.37M 1s[0m
+[0;32m    virtualbox-iso:  32100K .......... .......... .......... .......... .......... 56% 19.2M 1s[0m
+[0;32m    virtualbox-iso:  32150K .......... .......... .......... .......... .......... 56%  120M 1s[0m
+[0;32m    virtualbox-iso:  32200K .......... .......... .......... .......... .......... 56%  472M 1s[0m
+[0;32m    virtualbox-iso:  32250K .......... .......... .......... .......... .......... 57% 25.9M 1s[0m
+[0;32m    virtualbox-iso:  32300K .......... .......... .......... .......... .......... 57% 4.38M 1s[0m
+[0;32m    virtualbox-iso:  32350K .......... .......... .......... .......... .......... 57%  459M 1s[0m
+[0;32m    virtualbox-iso:  32400K .......... .......... .......... .......... .......... 57% 25.2M 1s[0m
+[0;32m    virtualbox-iso:  32450K .......... .......... .......... .......... .......... 57% 49.4M 1s[0m
+[0;32m    virtualbox-iso:  32500K .......... .......... .......... .......... .......... 57% 36.7M 1s[0m
+[0;32m    virtualbox-iso:  32550K .......... .......... .......... .......... .......... 57% 4.53M 1s[0m
+[0;32m    virtualbox-iso:  32600K .......... .......... .......... .......... .......... 57%  162M 1s[0m
+[0;32m    virtualbox-iso:  32650K .......... .......... .......... .......... .......... 57%  509M 1s[0m
+[0;32m    virtualbox-iso:  32700K .......... .......... .......... .......... .......... 57% 16.1M 1s[0m
+[0;32m    virtualbox-iso:  32750K .......... .......... .......... .......... .......... 57% 63.6M 1s[0m
+[0;32m    virtualbox-iso:  32800K .......... .......... .......... .......... .......... 58% 3.90M 1s[0m
+[0;32m    virtualbox-iso:  32850K .......... .......... .......... .......... .......... 58% 40.2M 1s[0m
+[0;32m    virtualbox-iso:  32900K .......... .......... .......... .......... .......... 58%  242M 1s[0m
+[0;32m    virtualbox-iso:  32950K .......... .......... .......... .......... .......... 58%  447M 1s[0m
+[0;32m    virtualbox-iso:  33000K .......... .......... .......... .......... .......... 58% 11.1M 1s[0m
+[0;32m    virtualbox-iso:  33050K .......... .......... .......... .......... .......... 58% 5.82M 1s[0m
+[0;32m    virtualbox-iso:  33100K .......... .......... .......... .......... .......... 58% 79.6M 1s[0m
+[0;32m    virtualbox-iso:  33150K .......... .......... .......... .......... .......... 58% 23.8M 1s[0m
+[0;32m    virtualbox-iso:  33200K .......... .......... .......... .......... .......... 58% 22.4M 1s[0m
+[0;32m    virtualbox-iso:  33250K .......... .......... .......... .......... .......... 58%  355M 1s[0m
+[0;32m    virtualbox-iso:  33300K .......... .......... .......... .......... .......... 58% 3.95M 1s[0m
+[0;32m    virtualbox-iso:  33350K .......... .......... .......... .......... .......... 58% 64.0M 1s[0m
+[0;32m    virtualbox-iso:  33400K .......... .......... .......... .......... .......... 59% 49.5M 1s[0m
+[0;32m    virtualbox-iso:  33450K .......... .......... .......... .......... .......... 59%  355M 1s[0m
+[0;32m    virtualbox-iso:  33500K .......... .......... .......... .......... .......... 59% 17.1M 1s[0m
+[0;32m    virtualbox-iso:  33550K .......... .......... .......... .......... .......... 59% 5.55M 1s[0m
+[0;32m    virtualbox-iso:  33600K .......... .......... .......... .......... .......... 59% 9.85M 1s[0m
+[0;32m    virtualbox-iso:  33650K .......... .......... .......... .......... .......... 59%  380M 1s[0m
+[0;32m    virtualbox-iso:  33700K .......... .......... .......... .......... .......... 59% 10.1M 1s[0m
+[0;32m    virtualbox-iso:  33750K .......... .......... .......... .......... .......... 59% 62.3M 1s[0m
+[0;32m    virtualbox-iso:  33800K .......... .......... .......... .......... .......... 59%  393M 1s[0m
+[0;32m    virtualbox-iso:  33850K .......... .......... .......... .......... .......... 59% 8.09M 1s[0m
+[0;32m    virtualbox-iso:  33900K .......... .......... .......... .......... .......... 59% 98.1M 1s[0m
+[0;32m    virtualbox-iso:  33950K .......... .......... .......... .......... .......... 60%  414M 1s[0m
+[0;32m    virtualbox-iso:  34000K .......... .......... .......... .......... .......... 60% 10.8M 1s[0m
+[0;32m    virtualbox-iso:  34050K .......... .......... .......... .......... .......... 60%  417M 1s[0m
+[0;32m    virtualbox-iso:  34100K .......... .......... .......... .......... .......... 60% 4.28M 1s[0m
+[0;32m    virtualbox-iso:  34150K .......... .......... .......... .......... .......... 60% 78.2M 1s[0m
+[0;32m    virtualbox-iso:  34200K .......... .......... .......... .......... .......... 60%  357M 1s[0m
+[0;32m    virtualbox-iso:  34250K .......... .......... .......... .......... .......... 60%  542M 1s[0m
+[0;32m    virtualbox-iso:  34300K .......... .......... .......... .......... .......... 60% 18.4M 1s[0m
+[0;32m    virtualbox-iso:  34350K .......... .......... .......... .......... .......... 60% 4.42M 1s[0m
+[0;32m    virtualbox-iso:  34400K .......... .......... .......... .......... .......... 60% 16.7M 1s[0m
+[0;32m    virtualbox-iso:  34450K .......... .......... .......... .......... .......... 60%  283M 1s[0m
+[0;32m    virtualbox-iso:  34500K .......... .......... .......... .......... .......... 61%  144M 1s[0m
+[0;32m    virtualbox-iso:  34550K .......... .......... .......... .......... .......... 61%  199M 1s[0m
+[0;32m    virtualbox-iso:  34600K .......... .......... .......... .......... .......... 61% 3.73M 1s[0m
+[0;32m    virtualbox-iso:  34650K .......... .......... .......... .......... .......... 61%  140M 1s[0m
+[0;32m    virtualbox-iso:  34700K .......... .......... .......... .......... .......... 61% 3.39M 1s[0m
+[0;32m    virtualbox-iso:  34750K .......... .......... .......... .......... .......... 61% 86.7M 1s[0m
+[0;32m    virtualbox-iso:  34800K .......... .......... .......... .......... .......... 61%  104M 1s[0m
+[0;32m    virtualbox-iso:  34850K .......... .......... .......... .......... .......... 61%  400M 1s[0m
+[0;32m    virtualbox-iso:  34900K .......... .......... .......... .......... .......... 61% 40.6M 1s[0m
+[0;32m    virtualbox-iso:  34950K .......... .......... .......... .......... .......... 61%  140M 1s[0m
+[0;32m    virtualbox-iso:  35000K .......... .......... .......... .......... .......... 61%  399M 1s[0m
+[0;32m    virtualbox-iso:  35050K .......... .......... .......... .......... .......... 61%  327M 1s[0m
+[0;32m    virtualbox-iso:  35100K .......... .......... .......... .......... .......... 62% 3.17M 1s[0m
+[0;32m    virtualbox-iso:  35150K .......... .......... .......... .......... .......... 62% 96.2M 1s[0m
+[0;32m    virtualbox-iso:  35200K .......... .......... .......... .......... .......... 62%  231M 1s[0m
+[0;32m    virtualbox-iso:  35250K .......... .......... .......... .......... .......... 62%  104M 1s[0m
+[0;32m    virtualbox-iso:  35300K .......... .......... .......... .......... .......... 62%  386M 1s[0m
+[0;32m    virtualbox-iso:  35350K .......... .......... .......... .......... .......... 62% 3.50M 1s[0m
+[0;32m    virtualbox-iso:  35400K .......... .......... .......... .......... .......... 62% 45.5M 1s[0m
+[0;32m    virtualbox-iso:  35450K .......... .......... .......... .......... .......... 62%  425M 1s[0m
+[0;32m    virtualbox-iso:  35500K .......... .......... .......... .......... .......... 62%  420M 1s[0m
+[0;32m    virtualbox-iso:  35550K .......... .......... .......... .......... .......... 62%  462M 1s[0m
+[0;32m    virtualbox-iso:  35600K .......... .......... .......... .......... .......... 62% 3.86M 1s[0m
+[0;32m    virtualbox-iso:  35650K .......... .......... .......... .......... .......... 63%  200M 1s[0m
+[0;32m    virtualbox-iso:  35700K .......... .......... .......... .......... .......... 63% 17.3M 1s[0m
+[0;32m    virtualbox-iso:  35750K .......... .......... .......... .......... .......... 63%  248M 1s[0m
+[0;32m    virtualbox-iso:  35800K .......... .......... .......... .......... .......... 63%  432M 1s[0m
+[0;32m    virtualbox-iso:  35850K .......... .......... .......... .......... .......... 63% 3.76M 1s[0m
+[0;32m    virtualbox-iso:  35900K .......... .......... .......... .......... .......... 63% 79.3M 1s[0m
+[0;32m    virtualbox-iso:  35950K .......... .......... .......... .......... .......... 63%  154M 1s[0m
+[0;32m    virtualbox-iso:  36000K .......... .......... .......... .......... .......... 63% 50.7M 1s[0m
+[0;32m    virtualbox-iso:  36050K .......... .......... .......... .......... .......... 63% 27.8M 1s[0m
+[0;32m    virtualbox-iso:  36100K .......... .......... .......... .......... .......... 63% 3.76M 1s[0m
+[0;32m    virtualbox-iso:  36150K .......... .......... .......... .......... .......... 63% 97.2M 1s[0m
+[0;32m    virtualbox-iso:  36200K .......... .......... .......... .......... .......... 64%  188M 1s[0m
+[0;32m    virtualbox-iso:  36250K .......... .......... .......... .......... .......... 64%  122M 1s[0m
+[0;32m    virtualbox-iso:  36300K .......... .......... .......... .......... .......... 64% 24.1M 1s[0m
+[0;32m    virtualbox-iso:  36350K .......... .......... .......... .......... .......... 64%  245M 1s[0m
+[0;32m    virtualbox-iso:  36400K .......... .......... .......... .......... .......... 64% 3.75M 1s[0m
+[0;32m    virtualbox-iso:  36450K .......... .......... .......... .......... .......... 64%  205M 1s[0m
+[0;32m    virtualbox-iso:  36500K .......... .......... .......... .......... .......... 64% 45.8M 1s[0m
+[0;32m    virtualbox-iso:  36550K .......... .......... .......... .......... .......... 64% 49.7M 1s[0m
+[0;32m    virtualbox-iso:  36600K .......... .......... .......... .......... .......... 64% 69.5M 1s[0m
+[0;32m    virtualbox-iso:  36650K .......... .......... .......... .......... .......... 64% 4.71M 1s[0m
+[0;32m    virtualbox-iso:  36700K .......... .......... .......... .......... .......... 64% 29.3M 1s[0m
+[0;32m    virtualbox-iso:  36750K .......... .......... .......... .......... .......... 65%  139M 1s[0m
+[0;32m    virtualbox-iso:  36800K .......... .......... .......... .......... .......... 65%  260M 1s[0m
+[0;32m    virtualbox-iso:  36850K .......... .......... .......... .......... .......... 65% 95.5M 1s[0m
+[0;32m    virtualbox-iso:  36900K .......... .......... .......... .......... .......... 65% 3.35M 1s[0m
+[0;32m    virtualbox-iso:  36950K .......... .......... .......... .......... .......... 65%  169M 1s[0m
+[0;32m    virtualbox-iso:  37000K .......... .......... .......... .......... .......... 65%  416M 1s[0m
+[0;32m    virtualbox-iso:  37050K .......... .......... .......... .......... .......... 65% 14.3M 1s[0m
+[0;32m    virtualbox-iso:  37100K .......... .......... .......... .......... .......... 65%  354M 1s[0m
+[0;32m    virtualbox-iso:  37150K .......... .......... .......... .......... .......... 65% 2.10M 1s[0m
+[0;32m    virtualbox-iso:  37200K .......... .......... .......... .......... .......... 65% 68.3M 1s[0m
+[0;32m    virtualbox-iso:  37250K .......... .......... .......... .......... .......... 65%  109M 1s[0m
+[0;32m    virtualbox-iso:  37300K .......... .......... .......... .......... .......... 65% 12.3M 1s[0m
+[0;32m    virtualbox-iso:  37350K .......... .......... .......... .......... .......... 66% 26.1M 1s[0m
+[0;32m    virtualbox-iso:  37400K .......... .......... .......... .......... .......... 66%  370M 1s[0m
+[0;32m    virtualbox-iso:  37450K .......... .......... .......... .......... .......... 66%  434M 1s[0m
+[0;32m    virtualbox-iso:  37500K .......... .......... .......... .......... .......... 66%  392M 1s[0m
+[0;32m    virtualbox-iso:  37550K .......... .......... .......... .......... .......... 66%  436M 1s[0m
+[0;32m    virtualbox-iso:  37600K .......... .......... .......... .......... .......... 66%  441M 1s[0m
+[0;32m    virtualbox-iso:  37650K .......... .......... .......... .......... .......... 66% 3.87M 1s[0m
+[0;32m    virtualbox-iso:  37700K .......... .......... .......... .......... .......... 66%  109M 1s[0m
+[0;32m    virtualbox-iso:  37750K .......... .......... .......... .......... .......... 66%  456M 1s[0m
+[0;32m    virtualbox-iso:  37800K .......... .......... .......... .......... .......... 66%  471M 1s[0m
+[0;32m    virtualbox-iso:  37850K .......... .......... .......... .......... .......... 66% 20.3M 1s[0m
+[0;32m    virtualbox-iso:  37900K .......... .......... .......... .......... .......... 67% 4.97M 1s[0m
+[0;32m    virtualbox-iso:  37950K .......... .......... .......... .......... .......... 67%  137M 1s[0m
+[0;32m    virtualbox-iso:  38000K .......... .......... .......... .......... .......... 67% 34.9M 1s[0m
+[0;32m    virtualbox-iso:  38050K .......... .......... .......... .......... .......... 67% 64.8M 1s[0m
+[0;32m    virtualbox-iso:  38100K .......... .......... .......... .......... .......... 67%  268M 1s[0m
+[0;32m    virtualbox-iso:  38150K .......... .......... .......... .......... .......... 67% 3.52M 1s[0m
+[0;32m    virtualbox-iso:  38200K .......... .......... .......... .......... .......... 67% 67.1M 1s[0m
+[0;32m    virtualbox-iso:  38250K .......... .......... .......... .......... .......... 67%  207M 1s[0m
+[0;32m    virtualbox-iso:  38300K .......... .......... .......... .......... .......... 67%  133M 1s[0m
+[0;32m    virtualbox-iso:  38350K .......... .......... .......... .......... .......... 67%  429M 1s[0m
+[0;32m    virtualbox-iso:  38400K .......... .......... .......... .......... .......... 67% 3.31M 1s[0m
+[0;32m    virtualbox-iso:  38450K .......... .......... .......... .......... .......... 68% 32.7M 1s[0m
+[0;32m    virtualbox-iso:  38500K .......... .......... .......... .......... .......... 68%  135M 1s[0m
+[0;32m    virtualbox-iso:  38550K .......... .......... .......... .......... .......... 68%  360M 1s[0m
+[0;32m    virtualbox-iso:  38600K .......... .......... .......... .......... .......... 68%  463M 1s[0m
+[0;32m    virtualbox-iso:  38650K .......... .......... .......... .......... .......... 68% 3.75M 1s[0m
+[0;32m    virtualbox-iso:  38700K .......... .......... .......... .......... .......... 68%  146M 1s[0m
+[0;32m    virtualbox-iso:  38750K .......... .......... .......... .......... .......... 68%  448M 1s[0m
+[0;32m    virtualbox-iso:  38800K .......... .......... .......... .......... .......... 68% 22.5M 1s[0m
+[0;32m    virtualbox-iso:  38850K .......... .......... .......... .......... .......... 68%  440M 1s[0m
+[0;32m    virtualbox-iso:  38900K .......... .......... .......... .......... .......... 68% 4.34M 1s[0m
+[0;32m    virtualbox-iso:  38950K .......... .......... .......... .......... .......... 68% 32.4M 1s[0m
+[0;32m    virtualbox-iso:  39000K .......... .......... .......... .......... .......... 68% 48.8M 1s[0m
+[0;32m    virtualbox-iso:  39050K .......... .......... .......... .......... .......... 69%  122M 1s[0m
+[0;32m    virtualbox-iso:  39100K .......... .......... .......... .......... .......... 69% 39.6M 1s[0m
+[0;32m    virtualbox-iso:  39150K .......... .......... .......... .......... .......... 69% 4.27M 1s[0m
+[0;32m    virtualbox-iso:  39200K .......... .......... .......... .......... .......... 69% 26.7M 1s[0m
+[0;32m    virtualbox-iso:  39250K .......... .......... .......... .......... .......... 69%  204M 1s[0m
+[0;32m    virtualbox-iso:  39300K .......... .......... .......... .......... .......... 69%  396M 1s[0m
+[0;32m    virtualbox-iso:  39350K .......... .......... .......... .......... .......... 69% 63.3M 1s[0m
+[0;32m    virtualbox-iso:  39400K .......... .......... .......... .......... .......... 69% 20.7M 1s[0m
+[0;32m    virtualbox-iso:  39450K .......... .......... .......... .......... .......... 69% 4.78M 1s[0m
+[0;32m    virtualbox-iso:  39500K .......... .......... .......... .......... .......... 69% 40.9M 1s[0m
+[0;32m    virtualbox-iso:  39550K .......... .......... .......... .......... .......... 69% 78.6M 1s[0m
+[0;32m    virtualbox-iso:  39600K .......... .......... .......... .......... .......... 70% 72.5M 1s[0m
+[0;32m    virtualbox-iso:  39650K .......... .......... .......... .......... .......... 70% 34.7M 1s[0m
+[0;32m    virtualbox-iso:  39700K .......... .......... .......... .......... .......... 70% 4.13M 1s[0m
+[0;32m    virtualbox-iso:  39750K .......... .......... .......... .......... .......... 70%  415M 1s[0m
+[0;32m    virtualbox-iso:  39800K .......... .......... .......... .......... .......... 70% 15.1M 1s[0m
+[0;32m    virtualbox-iso:  39850K .......... .......... .......... .......... .......... 70%  133M 1s[0m
+[0;32m    virtualbox-iso:  39900K .......... .......... .......... .......... .......... 70%  391M 1s[0m
+[0;32m    virtualbox-iso:  39950K .......... .......... .......... .......... .......... 70% 3.97M 1s[0m
+[0;32m    virtualbox-iso:  40000K .......... .......... .......... .......... .......... 70%  211M 1s[0m
+[0;32m    virtualbox-iso:  40050K .......... .......... .......... .......... .......... 70% 29.6M 1s[0m
+[0;32m    virtualbox-iso:  40100K .......... .......... .......... .......... .......... 70%  117M 1s[0m
+[0;32m    virtualbox-iso:  40150K .......... .......... .......... .......... .......... 71%  445M 1s[0m
+[0;32m    virtualbox-iso:  40200K .......... .......... .......... .......... .......... 71% 3.89M 1s[0m
+[0;32m    virtualbox-iso:  40250K .......... .......... .......... .......... .......... 71% 47.9M 1s[0m
+[0;32m    virtualbox-iso:  40300K .......... .......... .......... .......... .......... 71% 49.2M 1s[0m
+[0;32m    virtualbox-iso:  40350K .......... .......... .......... .......... .......... 71% 39.3M 1s[0m
+[0;32m    virtualbox-iso:  40400K .......... .......... .......... .......... .......... 71%  460M 1s[0m
+[0;32m    virtualbox-iso:  40450K .......... .......... .......... .......... .......... 71% 3.71M 1s[0m
+[0;32m    virtualbox-iso:  40500K .......... .......... .......... .......... .......... 71% 68.0M 1s[0m
+[0;32m    virtualbox-iso:  40550K .......... .......... .......... .......... .......... 71%  421M 1s[0m
+[0;32m    virtualbox-iso:  40600K .......... .......... .......... .......... .......... 71%  452M 1s[0m
+[0;32m    virtualbox-iso:  40650K .......... .......... .......... .......... .......... 71% 7.96M 1s[0m
+[0;32m    virtualbox-iso:  40700K .......... .......... .......... .......... .......... 71% 6.53M 1s[0m
+[0;32m    virtualbox-iso:  40750K .......... .......... .......... .......... .......... 72%  334M 1s[0m
+[0;32m    virtualbox-iso:  40800K .......... .......... .......... .......... .......... 72%  465M 1s[0m
+[0;32m    virtualbox-iso:  40850K .......... .......... .......... .......... .......... 72% 21.0M 1s[0m
+[0;32m    virtualbox-iso:  40900K .......... .......... .......... .......... .......... 72%  359M 1s[0m
+[0;32m    virtualbox-iso:  40950K .......... .......... .......... .......... .......... 72% 3.81M 1s[0m
+[0;32m    virtualbox-iso:  41000K .......... .......... .......... .......... .......... 72%  119M 1s[0m
+[0;32m    virtualbox-iso:  41050K .......... .......... .......... .......... .......... 72%  333M 1s[0m
+[0;32m    virtualbox-iso:  41100K .......... .......... .......... .......... .......... 72% 62.3M 1s[0m
+[0;32m    virtualbox-iso:  41150K .......... .......... .......... .......... .......... 72% 14.4M 1s[0m
+[0;32m    virtualbox-iso:  41200K .......... .......... .......... .......... .......... 72% 4.50M 1s[0m
+[0;32m    virtualbox-iso:  41250K .......... .......... .......... .......... .......... 72% 34.2M 1s[0m
+[0;32m    virtualbox-iso:  41300K .......... .......... .......... .......... .......... 73%  417M 1s[0m
+[0;32m    virtualbox-iso:  41350K .......... .......... .......... .......... .......... 73% 49.1M 1s[0m
+[0;32m    virtualbox-iso:  41400K .......... .......... .......... .......... .......... 73% 13.1M 1s[0m
+[0;32m    virtualbox-iso:  41450K .......... .......... .......... .......... .......... 73% 5.81M 1s[0m
+[0;32m    virtualbox-iso:  41500K .......... .......... .......... .......... .......... 73% 26.6M 1s[0m
+[0;32m    virtualbox-iso:  41550K .......... .......... .......... .......... .......... 73%  138M 1s[0m
+[0;32m    virtualbox-iso:  41600K .......... .......... .......... .......... .......... 73% 54.3M 1s[0m
+[0;32m    virtualbox-iso:  41650K .......... .......... .......... .......... .......... 73% 27.1M 1s[0m
+[0;32m    virtualbox-iso:  41700K .......... .......... .......... .......... .......... 73% 4.56M 1s[0m
+[0;32m    virtualbox-iso:  41750K .......... .......... .......... .......... .......... 73% 46.5M 1s[0m
+[0;32m    virtualbox-iso:  41800K .......... .......... .......... .......... .......... 73%  327M 1s[0m
+[0;32m    virtualbox-iso:  41850K .......... .......... .......... .......... .......... 74% 43.1M 1s[0m
+[0;32m    virtualbox-iso:  41900K .......... .......... .......... .......... .......... 74% 69.6M 1s[0m
+[0;32m    virtualbox-iso:  41950K .......... .......... .......... .......... .......... 74% 4.53M 1s[0m
+[0;32m    virtualbox-iso:  42000K .......... .......... .......... .......... .......... 74% 19.9M 1s[0m
+[0;32m    virtualbox-iso:  42050K .......... .......... .......... .......... .......... 74%  431M 1s[0m
+[0;32m    virtualbox-iso:  42100K .......... .......... .......... .......... .......... 74% 30.4M 1s[0m
+[0;32m    virtualbox-iso:  42150K .......... .......... .......... .......... .......... 74% 29.8M 1s[0m
+[0;32m    virtualbox-iso:  42200K .......... .......... .......... .......... .......... 74%  450M 1s[0m
+[0;32m    virtualbox-iso:  42250K .......... .......... .......... .......... .......... 74% 2.78M 1s[0m
+[0;32m    virtualbox-iso:  42300K .......... .......... .......... .......... .......... 74%  372M 1s[0m
+[0;32m    virtualbox-iso:  42350K .......... .......... .......... .......... .......... 74%  435M 1s[0m
+[0;32m    virtualbox-iso:  42400K .......... .......... .......... .......... .......... 74%  327M 1s[0m
+[0;32m    virtualbox-iso:  42450K .......... .......... .......... .......... .......... 75%  488M 1s[0m
+[0;32m    virtualbox-iso:  42500K .......... .......... .......... .......... .......... 75% 4.15M 1s[0m
+[0;32m    virtualbox-iso:  42550K .......... .......... .......... .......... .......... 75% 68.4M 1s[0m
+[0;32m    virtualbox-iso:  42600K .......... .......... .......... .......... .......... 75%  443M 1s[0m
+[0;32m    virtualbox-iso:  42650K .......... .......... .......... .......... .......... 75%  460M 1s[0m
+[0;32m    virtualbox-iso:  42700K .......... .......... .......... .......... .......... 75% 27.8M 1s[0m
+[0;32m    virtualbox-iso:  42750K .......... .......... .......... .......... .......... 75% 4.07M 1s[0m
+[0;32m    virtualbox-iso:  42800K .......... .......... .......... .......... .......... 75% 38.6M 1s[0m
+[0;32m    virtualbox-iso:  42850K .......... .......... .......... .......... .......... 75%  132M 1s[0m
+[0;32m    virtualbox-iso:  42900K .......... .......... .......... .......... .......... 75%  349M 1s[0m
+[0;32m    virtualbox-iso:  42950K .......... .......... .......... .......... .......... 75% 16.0M 1s[0m
+[0;32m    virtualbox-iso:  43000K .......... .......... .......... .......... .......... 76% 4.98M 1s[0m
+[0;32m    virtualbox-iso:  43050K .......... .......... .......... .......... .......... 76% 58.3M 1s[0m
+[0;32m    virtualbox-iso:  43100K .......... .......... .......... .......... .......... 76% 29.1M 1s[0m
+[0;32m    virtualbox-iso:  43150K .......... .......... .......... .......... .......... 76% 26.8M 1s[0m
+[0;32m    virtualbox-iso:  43200K .......... .......... .......... .......... .......... 76%  422M 1s[0m
+[0;32m    virtualbox-iso:  43250K .......... .......... .......... .......... .......... 76% 3.96M 1s[0m
+[0;32m    virtualbox-iso:  43300K .......... .......... .......... .......... .......... 76%  201M 1s[0m
+[0;32m    virtualbox-iso:  43350K .......... .......... .......... .......... .......... 76% 52.1M 1s[0m
+[0;32m    virtualbox-iso:  43400K .......... .......... .......... .......... .......... 76% 33.3M 1s[0m
+[0;32m    virtualbox-iso:  43450K .......... .......... .......... .......... .......... 76%  379M 1s[0m
+[0;32m    virtualbox-iso:  43500K .......... .......... .......... .......... .......... 76% 3.41M 1s[0m
+[0;32m    virtualbox-iso:  43550K .......... .......... .......... .......... .......... 77% 58.1M 1s[0m
+[0;32m    virtualbox-iso:  43600K .......... .......... .......... .......... .......... 77%  427M 1s[0m
+[0;32m    virtualbox-iso:  43650K .......... .......... .......... .......... .......... 77%  456M 1s[0m
+[0;32m    virtualbox-iso:  43700K .......... .......... .......... .......... .......... 77%  256M 1s[0m
+[0;32m    virtualbox-iso:  43750K .......... .......... .......... .......... .......... 77% 3.92M 1s[0m
+[0;32m    virtualbox-iso:  43800K .......... .......... .......... .......... .......... 77%  416M 1s[0m
+[0;32m    virtualbox-iso:  43850K .......... .......... .......... .......... .......... 77% 20.8M 1s[0m
+[0;32m    virtualbox-iso:  43900K .......... .......... .......... .......... .......... 77% 77.0M 1s[0m
+[0;32m    virtualbox-iso:  43950K .......... .......... .......... .......... .......... 77%  458M 1s[0m
+[0;32m    virtualbox-iso:  44000K .......... .......... .......... .......... .......... 77% 2.98M 1s[0m
+[0;32m    virtualbox-iso:  44050K .......... .......... .......... .......... .......... 77% 57.5M 1s[0m
+[0;32m    virtualbox-iso:  44100K .......... .......... .......... .......... .......... 77%  137M 1s[0m
+[0;32m    virtualbox-iso:  44150K .......... .......... .......... .......... .......... 78%  411M 1s[0m
+[0;32m    virtualbox-iso:  44200K .......... .......... .......... .......... .......... 78% 9.45M 1s[0m
+[0;32m    virtualbox-iso:  44250K .......... .......... .......... .......... .......... 78% 9.58M 1s[0m
+[0;32m    virtualbox-iso:  44300K .......... .......... .......... .......... .......... 78% 76.5M 1s[0m
+[0;32m    virtualbox-iso:  44350K .......... .......... .......... .......... .......... 78% 64.6M 1s[0m
+[0;32m    virtualbox-iso:  44400K .......... .......... .......... .......... .......... 78%  455M 1s[0m
+[0;32m    virtualbox-iso:  44450K .......... .......... .......... .......... .......... 78%  465M 1s[0m
+[0;32m    virtualbox-iso:  44500K .......... .......... .......... .......... .......... 78% 3.54M 1s[0m
+[0;32m    virtualbox-iso:  44550K .......... .......... .......... .......... .......... 78% 80.2M 1s[0m
+[0;32m    virtualbox-iso:  44600K .......... .......... .......... .......... .......... 78%  262M 1s[0m
+[0;32m    virtualbox-iso:  44650K .......... .......... .......... .......... .......... 78%  439M 1s[0m
+[0;32m    virtualbox-iso:  44700K .......... .......... .......... .......... .......... 79% 19.7M 1s[0m
+[0;32m    virtualbox-iso:  44750K .......... .......... .......... .......... .......... 79%  389M 1s[0m
+[0;32m    virtualbox-iso:  44800K .......... .......... .......... .......... .......... 79% 4.59M 1s[0m
+[0;32m    virtualbox-iso:  44850K .......... .......... .......... .......... .......... 79%  147M 1s[0m
+[0;32m    virtualbox-iso:  44900K .......... .......... .......... .......... .......... 79% 19.1M 1s[0m
+[0;32m    virtualbox-iso:  44950K .......... .......... .......... .......... .......... 79%  217M 1s[0m
+[0;32m    virtualbox-iso:  45000K .......... .......... .......... .......... .......... 79%  174M 1s[0m
+[0;32m    virtualbox-iso:  45050K .......... .......... .......... .......... .......... 79% 4.25M 1s[0m
+[0;32m    virtualbox-iso:  45100K .......... .......... .......... .......... .......... 79% 53.6M 1s[0m
+[0;32m    virtualbox-iso:  45150K .......... .......... .......... .......... .......... 79% 20.4M 1s[0m
+[0;32m    virtualbox-iso:  45200K .......... .......... .......... .......... .......... 79%  137M 1s[0m
+[0;32m    virtualbox-iso:  45250K .......... .......... .......... .......... .......... 80%  464M 1s[0m
+[0;32m    virtualbox-iso:  45300K .......... .......... .......... .......... .......... 80% 3.83M 1s[0m
+[0;32m    virtualbox-iso:  45350K .......... .......... .......... .......... .......... 80%  413M 1s[0m
+[0;32m    virtualbox-iso:  45400K .......... .......... .......... .......... .......... 80% 37.9M 1s[0m
+[0;32m    virtualbox-iso:  45450K .......... .......... .......... .......... .......... 80% 89.4M 1s[0m
+[0;32m    virtualbox-iso:  45500K .......... .......... .......... .......... .......... 80% 25.2M 1s[0m
+[0;32m    virtualbox-iso:  45550K .......... .......... .......... .......... .......... 80% 4.37M 1s[0m
+[0;32m    virtualbox-iso:  45600K .......... .......... .......... .......... .......... 80%  368M 1s[0m
+[0;32m    virtualbox-iso:  45650K .......... .......... .......... .......... .......... 80% 9.71M 1s[0m
+[0;32m    virtualbox-iso:  45700K .......... .......... .......... .......... .......... 80% 36.8M 1s[0m
+[0;32m    virtualbox-iso:  45750K .......... .......... .......... .......... .......... 80%  436M 1s[0m
+[0;32m    virtualbox-iso:  45800K .......... .......... .......... .......... .......... 80% 6.06M 1s[0m
+[0;32m    virtualbox-iso:  45850K .......... .......... .......... .......... .......... 81%  212M 1s[0m
+[0;32m    virtualbox-iso:  45900K .......... .......... .......... .......... .......... 81% 35.7M 1s[0m
+[0;32m    virtualbox-iso:  45950K .......... .......... .......... .......... .......... 81% 35.4M 1s[0m
+[0;32m    virtualbox-iso:  46000K .......... .......... .......... .......... .......... 81% 29.2M 1s[0m
+[0;32m    virtualbox-iso:  46050K .......... .......... .......... .......... .......... 81% 4.60M 1s[0m
+[0;32m    virtualbox-iso:  46100K .......... .......... .......... .......... .......... 81%  365M 1s[0m
+[0;32m    virtualbox-iso:  46150K .......... .......... .......... .......... .......... 81% 21.5M 1s[0m
+[0;32m    virtualbox-iso:  46200K .......... .......... .......... .......... .......... 81%  139M 1s[0m
+[0;32m    virtualbox-iso:  46250K .......... .......... .......... .......... .......... 81%  469M 1s[0m
+[0;32m    virtualbox-iso:  46300K .......... .......... .......... .......... .......... 81% 4.24M 1s[0m
+[0;32m    virtualbox-iso:  46350K .......... .......... .......... .......... .......... 81%  174M 1s[0m
+[0;32m    virtualbox-iso:  46400K .......... .......... .......... .......... .......... 82% 13.6M 1s[0m
+[0;32m    virtualbox-iso:  46450K .......... .......... .......... .......... .......... 82%  277M 1s[0m
+[0;32m    virtualbox-iso:  46500K .......... .......... .......... .......... .......... 82%  409M 1s[0m
+[0;32m    virtualbox-iso:  46550K .......... .......... .......... .......... .......... 82% 4.33M 1s[0m
+[0;32m    virtualbox-iso:  46600K .......... .......... .......... .......... .......... 82%  151M 1s[0m
+[0;32m    virtualbox-iso:  46650K .......... .......... .......... .......... .......... 82% 24.6M 1s[0m
+[0;32m    virtualbox-iso:  46700K .......... .......... .......... .......... .......... 82% 81.8M 1s[0m
+[0;32m    virtualbox-iso:  46750K .......... .......... .......... .......... .......... 82%  248M 1s[0m
+[0;32m    virtualbox-iso:  46800K .......... .......... .......... .......... .......... 82% 4.05M 1s[0m
+[0;32m    virtualbox-iso:  46850K .......... .......... .......... .......... .......... 82%  403M 1s[0m
+[0;32m    virtualbox-iso:  46900K .......... .......... .......... .......... .......... 82% 37.4M 1s[0m
+[0;32m    virtualbox-iso:  46950K .......... .......... .......... .......... .......... 83% 27.4M 1s[0m
+[0;32m    virtualbox-iso:  47000K .......... .......... .......... .......... .......... 83%  423M 1s[0m
+[0;32m    virtualbox-iso:  47050K .......... .......... .......... .......... .......... 83% 3.56M 1s[0m
+[0;32m    virtualbox-iso:  47100K .......... .......... .......... .......... .......... 83% 64.8M 1s[0m
+[0;32m    virtualbox-iso:  47150K .......... .......... .......... .......... .......... 83%  122M 1s[0m
+[0;32m    virtualbox-iso:  47200K .......... .......... .......... .......... .......... 83%  436M 1s[0m
+[0;32m    virtualbox-iso:  47250K .......... .......... .......... .......... .......... 83%  417M 1s[0m
+[0;32m    virtualbox-iso:  47300K .......... .......... .......... .......... .......... 83% 2.72M 1s[0m
+[0;32m    virtualbox-iso:  47350K .......... .......... .......... .......... .......... 83% 32.5M 1s[0m
+[0;32m    virtualbox-iso:  47400K .......... .......... .......... .......... .......... 83%  283M 1s[0m
+[0;32m    virtualbox-iso:  47450K .......... .......... .......... .......... .......... 83%  100M 1s[0m
+[0;32m    virtualbox-iso:  47500K .......... .......... .......... .......... .......... 83% 87.9M 1s[0m
+[0;32m    virtualbox-iso:  47550K .......... .......... .......... .......... .......... 84% 7.84M 1s[0m
+[0;32m    virtualbox-iso:  47600K .......... .......... .......... .......... .......... 84% 20.8M 1s[0m
+[0;32m    virtualbox-iso:  47650K .......... .......... .......... .......... .......... 84% 23.8M 1s[0m
+[0;32m    virtualbox-iso:  47700K .......... .......... .......... .......... .......... 84%  120M 1s[0m
+[0;32m    virtualbox-iso:  47750K .......... .......... .......... .......... .......... 84%  480M 1s[0m
+[0;32m    virtualbox-iso:  47800K .......... .......... .......... .......... .......... 84%  480M 1s[0m
+[0;32m    virtualbox-iso:  47850K .......... .......... .......... .......... .......... 84% 3.65M 1s[0m
+[0;32m    virtualbox-iso:  47900K .......... .......... .......... .......... .......... 84%  256M 1s[0m
+[0;32m    virtualbox-iso:  47950K .......... .......... .......... .......... .......... 84% 23.4M 1s[0m
+[0;32m    virtualbox-iso:  48000K .......... .......... .......... .......... .......... 84%  238M 0s[0m
+[0;32m    virtualbox-iso:  48050K .......... .......... .......... .......... .......... 84% 59.1M 0s[0m
+[0;32m    virtualbox-iso:  48100K .......... .......... .......... .......... .......... 85% 4.54M 0s[0m
+[0;32m    virtualbox-iso:  48150K .......... .......... .......... .......... .......... 85% 52.3M 0s[0m
+[0;32m    virtualbox-iso:  48200K .......... .......... .......... .......... .......... 85% 29.4M 0s[0m
+[0;32m    virtualbox-iso:  48250K .......... .......... .......... .......... .......... 85%  232M 0s[0m
+[0;32m    virtualbox-iso:  48300K .......... .......... .......... .......... .......... 85% 35.5M 0s[0m
+[0;32m    virtualbox-iso:  48350K .......... .......... .......... .......... .......... 85% 4.17M 0s[0m
+[0;32m    virtualbox-iso:  48400K .......... .......... .......... .......... .......... 85%  117M 0s[0m
+[0;32m    virtualbox-iso:  48450K .......... .......... .......... .......... .......... 85% 20.2M 0s[0m
+[0;32m    virtualbox-iso:  48500K .......... .......... .......... .......... .......... 85% 87.1M 0s[0m
+[0;32m    virtualbox-iso:  48550K .......... .......... .......... .......... .......... 85%  384M 0s[0m
+[0;32m    virtualbox-iso:  48600K .......... .......... .......... .......... .......... 85% 4.25M 0s[0m
+[0;32m    virtualbox-iso:  48650K .......... .......... .......... .......... .......... 86% 65.4M 0s[0m
+[0;32m    virtualbox-iso:  48700K .......... .......... .......... .......... .......... 86% 92.4M 0s[0m
+[0;32m    virtualbox-iso:  48750K .......... .......... .......... .......... .......... 86% 33.1M 0s[0m
+[0;32m    virtualbox-iso:  48800K .......... .......... .......... .......... .......... 86%  451M 0s[0m
+[0;32m    virtualbox-iso:  48850K .......... .......... .......... .......... .......... 86% 3.54M 0s[0m
+[0;32m    virtualbox-iso:  48900K .......... .......... .......... .......... .......... 86%  173M 0s[0m
+[0;32m    virtualbox-iso:  48950K .......... .......... .......... .......... .......... 86%  445M 0s[0m
+[0;32m    virtualbox-iso:  49000K .......... .......... .......... .......... .......... 86% 12.4M 0s[0m
+[0;32m    virtualbox-iso:  49050K .......... .......... .......... .......... .......... 86%  386M 0s[0m
+[0;32m    virtualbox-iso:  49100K .......... .......... .......... .......... .......... 86% 4.96M 0s[0m
+[0;32m    virtualbox-iso:  49150K .......... .......... .......... .......... .......... 86% 24.9M 0s[0m
+[0;32m    virtualbox-iso:  49200K .......... .......... .......... .......... .......... 86%  127M 0s[0m
+[0;32m    virtualbox-iso:  49250K .......... .......... .......... .......... .......... 87%  129M 0s[0m
+[0;32m    virtualbox-iso:  49300K .......... .......... .......... .......... .......... 87% 20.6M 0s[0m
+[0;32m    virtualbox-iso:  49350K .......... .......... .......... .......... .......... 87% 4.25M 0s[0m
+[0;32m    virtualbox-iso:  49400K .......... .......... .......... .......... .......... 87%  145M 0s[0m
+[0;32m    virtualbox-iso:  49450K .......... .......... .......... .......... .......... 87% 15.9M 0s[0m
+[0;32m    virtualbox-iso:  49500K .......... .......... .......... .......... .......... 87%  423M 0s[0m
+[0;32m    virtualbox-iso:  49550K .......... .......... .......... .......... .......... 87% 31.9M 0s[0m
+[0;32m    virtualbox-iso:  49600K .......... .......... .......... .......... .......... 87% 4.82M 0s[0m
+[0;32m    virtualbox-iso:  49650K .......... .......... .......... .......... .......... 87%  186M 0s[0m
+[0;32m    virtualbox-iso:  49700K .......... .......... .......... .......... .......... 87% 36.1M 0s[0m
+[0;32m    virtualbox-iso:  49750K .......... .......... .......... .......... .......... 87%  211M 0s[0m
+[0;32m    virtualbox-iso:  49800K .......... .......... .......... .......... .......... 88% 28.4M 0s[0m
+[0;32m    virtualbox-iso:  49850K .......... .......... .......... .......... .......... 88% 4.11M 0s[0m
+[0;32m    virtualbox-iso:  49900K .......... .......... .......... .......... .......... 88% 85.2M 0s[0m
+[0;32m    virtualbox-iso:  49950K .......... .......... .......... .......... .......... 88% 24.5M 0s[0m
+[0;32m    virtualbox-iso:  50000K .......... .......... .......... .......... .......... 88%  189M 0s[0m
+[0;32m    virtualbox-iso:  50050K .......... .......... .......... .......... .......... 88%  443M 0s[0m
+[0;32m    virtualbox-iso:  50100K .......... .......... .......... .......... .......... 88% 3.96M 0s[0m
+[0;32m    virtualbox-iso:  50150K .......... .......... .......... .......... .......... 88% 69.3M 0s[0m
+[0;32m    virtualbox-iso:  50200K .......... .......... .......... .......... .......... 88%  232M 0s[0m
+[0;32m    virtualbox-iso:  50250K .......... .......... .......... .......... .......... 88% 26.0M 0s[0m
+[0;32m    virtualbox-iso:  50300K .......... .......... .......... .......... .......... 88% 35.6M 0s[0m
+[0;32m    virtualbox-iso:  50350K .......... .......... .......... .......... .......... 89% 4.54M 0s[0m
+[0;32m    virtualbox-iso:  50400K .......... .......... .......... .......... .......... 89% 62.9M 0s[0m
+[0;32m    virtualbox-iso:  50450K .......... .......... .......... .......... .......... 89% 82.7M 0s[0m
+[0;32m    virtualbox-iso:  50500K .......... .......... .......... .......... .......... 89% 50.8M 0s[0m
+[0;32m    virtualbox-iso:  50550K .......... .......... .......... .......... .......... 89% 30.0M 0s[0m
+[0;32m    virtualbox-iso:  50600K .......... .......... .......... .......... .......... 89% 4.38M 0s[0m
+[0;32m    virtualbox-iso:  50650K .......... .......... .......... .......... .......... 89%  105M 0s[0m
+[0;32m    virtualbox-iso:  50700K .......... .......... .......... .......... .......... 89% 8.09M 0s[0m
+[0;32m    virtualbox-iso:  50750K .......... .......... .......... .......... .......... 89%  382M 0s[0m
+[0;32m    virtualbox-iso:  50800K .......... .......... .......... .......... .......... 89%  240M 0s[0m
+[0;32m    virtualbox-iso:  50850K .......... .......... .......... .......... .......... 89% 19.2M 0s[0m
+[0;32m    virtualbox-iso:  50900K .......... .......... .......... .......... .......... 89% 7.94M 0s[0m
+[0;32m    virtualbox-iso:  50950K .......... .......... .......... .......... .......... 90%  444M 0s[0m
+[0;32m    virtualbox-iso:  51000K .......... .......... .......... .......... .......... 90% 19.8M 0s[0m
+[0;32m    virtualbox-iso:  51050K .......... .......... .......... .......... .......... 90%  447M 0s[0m
+[0;32m    virtualbox-iso:  51100K .......... .......... .......... .......... .......... 90%  205M 0s[0m
+[0;32m    virtualbox-iso:  51150K .......... .......... .......... .......... .......... 90% 3.65M 0s[0m
+[0;32m    virtualbox-iso:  51200K .......... .......... .......... .......... .......... 90%  215M 0s[0m
+[0;32m    virtualbox-iso:  51250K .......... .......... .......... .......... .......... 90% 96.9M 0s[0m
+[0;32m    virtualbox-iso:  51300K .......... .......... .......... .......... .......... 90% 17.7M 0s[0m
+[0;32m    virtualbox-iso:  51350K .......... .......... .......... .......... .......... 90%  425M 0s[0m
+[0;32m    virtualbox-iso:  51400K .......... .......... .......... .......... .......... 90% 3.43M 0s[0m
+[0;32m    virtualbox-iso:  51450K .......... .......... .......... .......... .......... 90% 80.2M 0s[0m
+[0;32m    virtualbox-iso:  51500K .......... .......... .......... .......... .......... 91% 83.3M 0s[0m
+[0;32m    virtualbox-iso:  51550K .......... .......... .......... .......... .......... 91%  398M 0s[0m
+[0;32m    virtualbox-iso:  51600K .......... .......... .......... .......... .......... 91%  126M 0s[0m
+[0;32m    virtualbox-iso:  51650K .......... .......... .......... .......... .......... 91% 3.71M 0s[0m
+[0;32m    virtualbox-iso:  51700K .......... .......... .......... .......... .......... 91%  133M 0s[0m
+[0;32m    virtualbox-iso:  51750K .......... .......... .......... .......... .......... 91%  432M 0s[0m
+[0;32m    virtualbox-iso:  51800K .......... .......... .......... .......... .......... 91% 26.7M 0s[0m
+[0;32m    virtualbox-iso:  51850K .......... .......... .......... .......... .......... 91%  127M 0s[0m
+[0;32m    virtualbox-iso:  51900K .......... .......... .......... .......... .......... 91% 4.39M 0s[0m
+[0;32m    virtualbox-iso:  51950K .......... .......... .......... .......... .......... 91%  110M 0s[0m
+[0;32m    virtualbox-iso:  52000K .......... .......... .......... .......... .......... 91%  444M 0s[0m
+[0;32m    virtualbox-iso:  52050K .......... .......... .......... .......... .......... 92% 10.5M 0s[0m
+[0;32m    virtualbox-iso:  52100K .......... .......... .......... .......... .......... 92%  350M 0s[0m
+[0;32m    virtualbox-iso:  52150K .......... .......... .......... .......... .......... 92% 5.16M 0s[0m
+[0;32m    virtualbox-iso:  52200K .......... .......... .......... .......... .......... 92%  133M 0s[0m
+[0;32m    virtualbox-iso:  52250K .......... .......... .......... .......... .......... 92%  463M 0s[0m
+[0;32m    virtualbox-iso:  52300K .......... .......... .......... .......... .......... 92% 17.9M 0s[0m
+[0;32m    virtualbox-iso:  52350K .......... .......... .......... .......... .......... 92%  427M 0s[0m
+[0;32m    virtualbox-iso:  52400K .......... .......... .......... .......... .......... 92% 4.78M 0s[0m
+[0;32m    virtualbox-iso:  52450K .......... .......... .......... .......... .......... 92%  119M 0s[0m
+[0;32m    virtualbox-iso:  52500K .......... .......... .......... .......... .......... 92% 20.7M 0s[0m
+[0;32m    virtualbox-iso:  52550K .......... .......... .......... .......... .......... 92%  260M 0s[0m
+[0;32m    virtualbox-iso:  52600K .......... .......... .......... .......... .......... 92% 11.6M 0s[0m
+[0;32m    virtualbox-iso:  52650K .......... .......... .......... .......... .......... 93% 5.13M 0s[0m
+[0;32m    virtualbox-iso:  52700K .......... .......... .......... .......... .......... 93% 33.8M 0s[0m
+[0;32m    virtualbox-iso:  52750K .......... .......... .......... .......... .......... 93% 63.2M 0s[0m
+[0;32m    virtualbox-iso:  52800K .......... .......... .......... .......... .......... 93%  340M 0s[0m
+[0;32m    virtualbox-iso:  52850K .......... .......... .......... .......... .......... 93% 4.37M 0s[0m
+[0;32m    virtualbox-iso:  52900K .......... .......... .......... .......... .......... 93% 41.7M 0s[0m
+[0;32m    virtualbox-iso:  52950K .......... .......... .......... .......... .......... 93% 32.3M 0s[0m
+[0;32m    virtualbox-iso:  53000K .......... .......... .......... .......... .......... 93%  436M 0s[0m
+[0;32m    virtualbox-iso:  53050K .......... .......... .......... .......... .......... 93%  459M 0s[0m
+[0;32m    virtualbox-iso:  53100K .......... .......... .......... .......... .......... 93% 14.0M 0s[0m
+[0;32m    virtualbox-iso:  53150K .......... .......... .......... .......... .......... 93%  358M 0s[0m
+[0;32m    virtualbox-iso:  53200K .......... .......... .......... .......... .......... 94% 5.05M 0s[0m
+[0;32m    virtualbox-iso:  53250K .......... .......... .......... .......... .......... 94%  244M 0s[0m
+[0;32m    virtualbox-iso:  53300K .......... .......... .......... .......... .......... 94% 25.0M 0s[0m
+[0;32m    virtualbox-iso:  53350K .......... .......... .......... .......... .......... 94%  447M 0s[0m
+[0;32m    virtualbox-iso:  53400K .......... .......... .......... .......... .......... 94% 3.61M 0s[0m
+[0;32m    virtualbox-iso:  53450K .......... .......... .......... .......... .......... 94%  115M 0s[0m
+[0;32m    virtualbox-iso:  53500K .......... .......... .......... .......... .......... 94% 17.4M 0s[0m
+[0;32m    virtualbox-iso:  53550K .......... .......... .......... .......... .......... 94%  268M 0s[0m
+[0;32m    virtualbox-iso:  53600K .......... .......... .......... .......... .......... 94%  432M 0s[0m
+[0;32m    virtualbox-iso:  53650K .......... .......... .......... .......... .......... 94% 15.4M 0s[0m
+[0;32m    virtualbox-iso:  53700K .......... .......... .......... .......... .......... 94% 3.72M 0s[0m
+[0;32m    virtualbox-iso:  53750K .......... .......... .......... .......... .......... 95%  106M 0s[0m
+[0;32m    virtualbox-iso:  53800K .......... .......... .......... .......... .......... 95%  276M 0s[0m
+[0;32m    virtualbox-iso:  53850K .......... .......... .......... .......... .......... 95% 12.0M 0s[0m
+[0;32m    virtualbox-iso:  53900K .......... .......... .......... .......... .......... 95% 62.0M 0s[0m
+[0;32m    virtualbox-iso:  53950K .......... .......... .......... .......... .......... 95% 7.03M 0s[0m
+[0;32m    virtualbox-iso:  54000K .......... .......... .......... .......... .......... 95% 62.6M 0s[0m
+[0;32m    virtualbox-iso:  54050K .......... .......... .......... .......... .......... 95%  134M 0s[0m
+[0;32m    virtualbox-iso:  54100K .......... .......... .......... .......... .......... 95% 20.1M 0s[0m
+[0;32m    virtualbox-iso:  54150K .......... .......... .......... .......... .......... 95% 73.2M 0s[0m
+[0;32m    virtualbox-iso:  54200K .......... .......... .......... .......... .......... 95% 2.91M 0s[0m
+[0;32m    virtualbox-iso:  54250K .......... .......... .......... .......... .......... 95%  342M 0s[0m
+[0;32m    virtualbox-iso:  54300K .......... .......... .......... .......... .......... 96% 13.6M 0s[0m
+[0;32m    virtualbox-iso:  54350K .......... .......... .......... .......... .......... 96%  183M 0s[0m
+[0;32m    virtualbox-iso:  54400K .......... .......... .......... .......... .......... 96%  431M 0s[0m
+[0;32m    virtualbox-iso:  54450K .......... .......... .......... .......... .......... 96% 7.81M 0s[0m
+[0;32m    virtualbox-iso:  54500K .......... .......... .......... .......... .......... 96%  103M 0s[0m
+[0;32m    virtualbox-iso:  54550K .......... .......... .......... .......... .......... 96% 75.9M 0s[0m
+[0;32m    virtualbox-iso:  54600K .......... .......... .......... .......... .......... 96%  217M 0s[0m
+[0;32m    virtualbox-iso:  54650K .......... .......... .......... .......... .......... 96% 24.8M 0s[0m
+[0;32m    virtualbox-iso:  54700K .......... .......... .......... .......... .......... 96% 3.83M 0s[0m
+[0;32m    virtualbox-iso:  54750K .......... .......... .......... .......... .......... 96%  153M 0s[0m
+[0;32m    virtualbox-iso:  54800K .......... .......... .......... .......... .......... 96%  258M 0s[0m
+[0;32m    virtualbox-iso:  54850K .......... .......... .......... .......... .......... 96% 18.3M 0s[0m
+[0;32m    virtualbox-iso:  54900K .......... .......... .......... .......... .......... 97%  377M 0s[0m
+[0;32m    virtualbox-iso:  54950K .......... .......... .......... .......... .......... 97% 4.79M 0s[0m
+[0;32m    virtualbox-iso:  55000K .......... .......... .......... .......... .......... 97% 9.10M 0s[0m
+[0;32m    virtualbox-iso:  55050K .......... .......... .......... .......... .......... 97%  114M 0s[0m
+[0;32m    virtualbox-iso:  55100K .......... .......... .......... .......... .......... 97%  378M 0s[0m
+[0;32m    virtualbox-iso:  55150K .......... .......... .......... .......... .......... 97% 28.1M 0s[0m
+[0;32m    virtualbox-iso:  55200K .......... .......... .......... .......... .......... 97% 5.46M 0s[0m
+[0;32m    virtualbox-iso:  55250K .......... .......... .......... .......... .......... 97% 30.9M 0s[0m
+[0;32m    virtualbox-iso:  55300K .......... .......... .......... .......... .......... 97% 41.8M 0s[0m
+[0;32m    virtualbox-iso:  55350K .......... .......... .......... .......... .......... 97%  204M 0s[0m
+[0;32m    virtualbox-iso:  55400K .......... .......... .......... .......... .......... 97%  451M 0s[0m
+[0;32m    virtualbox-iso:  55450K .......... .......... .......... .......... .......... 98% 3.76M 0s[0m
+[0;32m    virtualbox-iso:  55500K .......... .......... .......... .......... .......... 98% 36.3M 0s[0m
+[0;32m    virtualbox-iso:  55550K .......... .......... .......... .......... .......... 98% 19.1M 0s[0m
+[0;32m    virtualbox-iso:  55600K .......... .......... .......... .......... .......... 98%  179M 0s[0m
+[0;32m    virtualbox-iso:  55650K .......... .......... .......... .......... .......... 98%  385M 0s[0m
+[0;32m    virtualbox-iso:  55700K .......... .......... .......... .......... .......... 98% 3.66M 0s[0m
+[0;32m    virtualbox-iso:  55750K .......... .......... .......... .......... .......... 98% 4.54M 0s[0m
+[0;32m    virtualbox-iso:  55800K .......... .......... .......... .......... .......... 98% 29.8M 0s[0m
+[0;32m    virtualbox-iso:  55850K .......... .......... .......... .......... .......... 98% 82.7M 0s[0m
+[0;32m    virtualbox-iso:  55900K .......... .......... .......... .......... .......... 98%  253M 0s[0m
+[0;32m    virtualbox-iso:  55950K .......... .......... .......... .......... .......... 98%  329M 0s[0m
+[0;32m    virtualbox-iso:  56000K .......... .......... .......... .......... .......... 99%  356M 0s[0m
+[0;32m    virtualbox-iso:  56050K .......... .......... .......... .......... .......... 99% 14.9M 0s[0m
+[0;32m    virtualbox-iso:  56100K .......... .......... .......... .......... .......... 99% 24.6M 0s[0m
+[0;32m    virtualbox-iso:  56150K .......... .......... .......... .......... .......... 99%  263M 0s[0m
+[0;32m    virtualbox-iso:  56200K .......... .......... .......... .......... .......... 99%  225M 0s[0m
+[0;32m    virtualbox-iso:  56250K .......... .......... .......... .......... .......... 99% 4.83M 0s[0m
+[0;32m    virtualbox-iso:  56300K .......... .......... .......... .......... .......... 99% 49.1M 0s[0m
+[0;32m    virtualbox-iso:  56350K .......... .......... .......... .......... .......... 99%  429M 0s[0m
+[0;32m    virtualbox-iso:  56400K .......... .......... .......... .......... .......... 99%  480M 0s[0m
+[0;32m    virtualbox-iso:  56450K .......... .......... .......... .......... .......... 99%  488M 0s[0m
+[0;32m    virtualbox-iso:  56500K .......... .......... .......... .......... .......... 99% 4.09M 0s[0m
+[0;32m    virtualbox-iso:  56550K .......... .......... .......... .......... .......... 99%  211M 0s[0m
+[0;32m    virtualbox-iso:  56600K .......... ....                                       100% 26.2M=3.3s[0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: 2018-05-16 21:19:40 (16.7 MB/s) - ‘VBoxGuestAdditions_5.2.8.iso’ saved [57972736/57972736][0m
+[0;32m    virtualbox-iso:[0m
+[0;32m    virtualbox-iso: Verifying archive integrity... All good.[0m
+[0;32m    virtualbox-iso: Uncompressing VirtualBox 5.2.8 Guest Additions for Linux........[0m
+[0;32m    virtualbox-iso: VirtualBox Guest Additions installer[0m
+[0;32m    virtualbox-iso: Copying additional installer modules ...[0m
+[0;32m    virtualbox-iso: Installing additional modules ...[0m
+[0;32m    virtualbox-iso: VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel modules.[0m
+[0;32m    virtualbox-iso: VirtualBox Guest Additions: Starting.[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/dev.sh[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/cleanup.sh[0m
+[0;32m    virtualbox-iso: Reading package lists...[0m
+[0;32m    virtualbox-iso: Building dependency tree...[0m
+[0;32m    virtualbox-iso: Reading state information...[0m
+[0;32m    virtualbox-iso: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.[0m
+[0;32m    virtualbox-iso: cleaning up guest additions[0m
+[0;32m    virtualbox-iso: cleaning up dhcp leases[0m
+[0;32m    virtualbox-iso: cleaning up udev rules[0m
+[1;32m==> virtualbox-iso: Provisioning with shell script: ../scripts/zerodisk.sh[0m
+[0;32m    virtualbox-iso: dd: error writing ‘/EMPTY’: No space left on device[0m
+[0;32m    virtualbox-iso: ....finished[0m
+[0;32m    virtualbox-iso: 36294+0 records in[0m
+[0;32m    virtualbox-iso: 36293+0 records out[0m
+[0;32m    virtualbox-iso: 38056726528 bytes (38 GB) copied, 66.0049 s, 577 MB/s[0m
+[0;32m    virtualbox-iso: Zero disk successful[0m
+[1;32m==> virtualbox-iso: Halting the virtual machine...[0m
+[1;32m==> virtualbox-iso: Preparing to export machine...[0m
+[0;32m    virtualbox-iso: Deleting forwarded port mapping for the communicator (SSH, WinRM, etc) (host port 2674)[0m
+[1;32m==> virtualbox-iso: Exporting virtual machine...[0m
+[0;32m    virtualbox-iso: Executing: export packer-virtualbox-iso-1526505256 --output output-virtualbox-iso/packer-virtualbox-iso-1526505256.ovf[0m
+[1;32m==> virtualbox-iso: Deregistering and deleting VM...[0m
+[1;32m==> virtualbox-iso: Running post-processor: vagrant[0m
+[1;32m==> virtualbox-iso (vagrant): Creating Vagrant box for 'virtualbox' provider[0m
+[0;32m    virtualbox-iso (vagrant): Copying from artifact: output-virtualbox-iso/packer-virtualbox-iso-1526505256-disk001.vmdk[0m
+[0;32m    virtualbox-iso (vagrant): Copying from artifact: output-virtualbox-iso/packer-virtualbox-iso-1526505256.ovf[0m
+[0;32m    virtualbox-iso (vagrant): Renaming the OVF to box.ovf...[0m
+[0;32m    virtualbox-iso (vagrant): Compressing: Vagrantfile[0m
+[0;32m    virtualbox-iso (vagrant): Compressing: box.ovf[0m
+[0;32m    virtualbox-iso (vagrant): Compressing: metadata.json[0m
+[0;32m    virtualbox-iso (vagrant): Compressing: packer-virtualbox-iso-1526505256-disk001.vmdk[0m
+[1;32mBuild 'virtualbox-iso' finished.[0m
+
+==> Builds finished. The artifacts of successful builds are:
+--> virtualbox-iso: 'virtualbox' provider box: debian-8-jessie.box

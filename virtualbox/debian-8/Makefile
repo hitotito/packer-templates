@@ -4,5 +4,4 @@ all: clean
 	packer build template.json | tee output
 
 clean:
-	rm -f *.vmdk
-	rm -f debian-9-stretch.box
+	rm -f debian-8-jessie.box 

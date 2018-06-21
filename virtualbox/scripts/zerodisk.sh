@@ -1,2 +1,3 @@
 dd if=/dev/zero of=/EMPTY bs=1M || echo "....finished"
-rm -f /EMPTY
+sudo rm -f /EMPTY && echo "Zero disk successful"
+exit 0
