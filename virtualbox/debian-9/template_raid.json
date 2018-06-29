@@ -2,12 +2,12 @@
     "variables": {
         "core": "2",
         "memory": "2048",
-        "disk_size": "40140",
+        "disk_size": "104857600",
         "ssh_port": "22",
         "ssh_wait_timeout": "10000s",
         "iso_url": "http://mirrors.ocf.berkeley.edu/debian-cd/current/amd64/iso-cd/debian-9.4.0-amd64-netinst.iso",
         "iso_md5": "73bd8aaaeb843745ec939f6ae3906e48",
-        "vm_name": "debian-9-stretch"
+        "vm_name": "debian-9-stretch-raid"
     },
     "builders": [
         {
@@ -55,7 +55,6 @@
                                    "--type", "hdd",
                                    "--medium", "output-virtualbox-iso/{{.Name}}-disk2.vdi",
                                    "--hotpluggable", "on" ]
-
             ]
         }
     ],
