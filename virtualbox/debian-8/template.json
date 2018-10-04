@@ -1,6 +1,6 @@
 {
     "variables": {
-        "core": "1",
+        "core": "2",
         "memory": "2048",
         "disk_size": "40140",
         "ssh_port": "22",

@@ -11,7 +11,7 @@ dev-raid:  # debian-9-stretch-raid.box
 
 clean:
 	rm -f *.vmdk
-	rm -f debian-9-stretch*.box
+	rm -f debian-9*-stretch.box
 
 clean-full: clean
 	rm -rf packer_cache
