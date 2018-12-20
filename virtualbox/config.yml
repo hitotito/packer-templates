@@ -13,6 +13,11 @@ debian8.10:
   url: https://cdimage.debian.org/cdimage/archive/8.10.0/amd64/iso-cd/debian-8.10.0-amd64-netinst.iso
   md5: 19dcfc381bd3e609c6056216d203f5bc
 
+debian8.11:
+  vm_name: debian-8-11-jessie
+  url: https://cdimage.debian.org/cdimage/archive/8.11.0/amd64/iso-cd/debian-8.11.0-amd64-netinst.iso
+  md5: b2c2e59e37baeba74b2ede1636118908
+
 debian9.5:
   vm_name: debian-9-5-stretch
   url: https://cdimage.debian.org/mirror/cdimage/archive/9.5.0/amd64/iso-cd/debian-9.5.0-amd64-netinst.iso

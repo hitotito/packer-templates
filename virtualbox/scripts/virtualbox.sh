@@ -1,3 +1,4 @@
+# TODO - This is virtualbox version independent.  We should work on building different version
 #apt-get -y install virtualbox-guest-utils
 sudo apt-get -y install wget make gcc
 wget https://download.virtualbox.org/virtualbox/5.2.8/VBoxGuestAdditions_5.2.8.iso
