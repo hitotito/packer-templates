@@ -39,3 +39,12 @@ clean:
 
 clean-full: clean
 	rm -rf packer_cache
+
+publish:
+	@echo publishing...
+	# TODO create publish method
+	# Check output directory, and copy it over to target directory.
+	# 	0. fetch existing hash file
+	# 	1. update checksum hash file for updated images
+	# 	2. upload image and new checksum file
+	# access to destination should be provided by user
