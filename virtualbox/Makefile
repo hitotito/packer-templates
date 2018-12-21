@@ -5,7 +5,7 @@ all: clean
 
 # If the first argument is "build"...
 ifeq (build,$(firstword $(MAKECMDGOALS)))
-  # use the rest as arguments for "run"
+  # use the rest as arguments for "build"
   BUILD_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
   $(eval $(BUILD_ARGS):;@:)
 endif
@@ -31,10 +31,6 @@ _build_help:
 		@for t in $(shell python packer_helper.py list_targets) ; do \
 			echo $${t} ; \
 		done ; \
-
-# TODO - create different config for this, requires template speficiation
-dev-raid:  # debian-9-stretch-raid.box
-	packer build template_raid.json | tee output
 
 clean:
 	@echo Cleaning...
