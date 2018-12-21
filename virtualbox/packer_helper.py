@@ -9,6 +9,7 @@ PACKER_VARIABLES = {
     "packer_path": "{{ .Path }}",
     "packer_http_ip": "{{ .HTTPIP }}",
     "packer_http_port": "{{ .HTTPPort }}",
+    "packer_virtualbox_version": "{{ .Version }}",
 }
 
 DEFAULT_CONFIG_FILE = "config.yml"
