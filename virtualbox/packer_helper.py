@@ -1,6 +1,7 @@
 import click
 import json
 import sys
+import textwrap
 import yaml
 from jinja2 import Template
 
@@ -19,13 +20,21 @@ ERROR_SUCCESS = 0
 ERROR_NO_TARGET = 1
 ERROR_INVALID_TARGET = 2
 
+class ConfigException(Exception):
+    pass
+
 def check_target(config, target):
     available_targets = get_buildable_targets(config)
     if not target in available_targets:
-        # TODO : convert to exception
-        print ("Error: target [{}] is not available. Please specify a valid target.".format(target), file=sys.stderr)
-        print ("  Available targets:\n\t{}".format("\n\t".join(sorted(available_targets))), file=sys.stderr)
-        sys.exit(ERROR_NO_TARGET) 
+        msg = textwrap.dedent("""
+        Error: target [{target}] is not available. Please specify a valid target.
+        Available targets:
+        {targets_list}
+        """.format(
+            target=target,
+            targets_list="\t".join(sorted(available_targets)),
+        ))
+        raise ConfigException(msg)
 
 def get_config(config_file_path):
     return yaml.load(open(config_file_path, 'r').read())
@@ -65,8 +74,12 @@ def template(target, config_path):
     """
     """
     # Check if specified target is in configuration
-    config = get_config(config_path)
-    check_target(config, target)
+    try:
+        config = get_config(config_path)
+        check_target(config, target)
+    except ConfigException as e:
+        print (str(e), file=sys.stderr)
+        sys.exit(ERROR_NO_TARGET)
 
     variables = get_variables(config, target)
     build_template = Template(open(variables.get('template'), 'r').read())
@@ -80,8 +93,12 @@ def variables(target, config_path):
     """
     """
     # Check if specified target is in configuration
-    config = get_config(config_path)
-    check_target(config, target)
+    try:
+        config = get_config(config_path)
+        check_target(config, target)
+    except ConfigException as e:
+        print (str(e), file=sys.stderr)
+        sys.exit(ERROR_NO_TARGET)
 
     variables = get_variables(config, target)
     print (json.dumps(variables))
