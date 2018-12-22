@@ -38,7 +38,6 @@ debian9.6:  # current release
 
 # TODO - Need to fix templates/raid.json.j2, as raid build is currently broken
 debian9.6-raid:
+  _inherit: debian9.6
   vm_name: debian-9-6-stretch-raid
-  url: http://mirrors.ocf.berkeley.edu/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
-  md5: 0a5352e3568bc893a9f7b65192caf1e1
   template: templates/raid.json.j2
