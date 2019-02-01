@@ -30,6 +30,8 @@
             "ssh_password": "vagrant",
             "ssh_port": "{{ ssh_port }}",
             "ssh_wait_timeout": "{{ ssh_wait_timeout }}",
+            "shutdown_command": "sudo /sbin/shutdown -P now",
+            "post_shutdown_delay": "{{ packer_post_shutdown_delay }}",
             "vboxmanage": [
                 [ "modifyvm", "{{ packer_name }}", "--memory", "{{ memory }}" ],
                 [ "modifyvm", "{{ packer_name }}", "--cpus", "{{ core }}" ]

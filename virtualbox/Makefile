@@ -1,7 +1,8 @@
 PACKER_CACHE_DIR=packer_cache
+PYTHON=python3
 
 all: clean
-	make build $(shell python packer_helper.py list_targets)
+	make build $(shell $(PYTHON) packer_helper.py list-targets)
 
 # If the first argument is "build"...
 ifeq (build,$(firstword $(MAKECMDGOALS)))
@@ -22,13 +23,14 @@ build:
 
 _build_single:
 	@echo building ${BUILD_PARAM}
-	@python packer_helper.py template ${BUILD_PARAM} > ${PACKER_CACHE_DIR}/${BUILD_PARAM}.json
+	@mkdir -p ${PACKER_CACHE_DIR}
+	@$(PYTHON) packer_helper.py template ${BUILD_PARAM} > ${PACKER_CACHE_DIR}/${BUILD_PARAM}.json
 	@packer build ${PACKER_CACHE_DIR}/${BUILD_PARAM}.json
 
 _build_help:
 		@echo "'build' requires target(s). Please specify target(s)."
 		@echo "Avaiable targets:"
-		@for t in $(shell python packer_helper.py list_targets) ; do \
+		@for t in $(shell $(PYTHON) packer_helper.py list-targets) ; do \
 			echo $${t} ; \
 		done ; \
 

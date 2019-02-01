@@ -64,7 +64,7 @@ def entry_point():
 @entry_point.command()
 @click.option('-c', '--config', 'config_path', default=DEFAULT_CONFIG_FILE, help="configuration file path")
 def list_targets(config_path):
-    config = get_config(config)
+    config = get_config(config_path)
     print (" ".join(sorted(get_buildable_targets(config))))
 
 @entry_point.command()

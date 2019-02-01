@@ -4,16 +4,17 @@ global:
   core: 2
   memory: 2048
   disk_size: 40140
+  post_shutdown_delay: 10s
   ssh_port: 22
   ssh_wait_timeout: 10000s
   template: templates/debian.json.j2
 
 # Centos builds
-centos7.6: # WIP
-  vm_name: centos-7-6
-  url: http://mirrors.usc.edu/pub/linux/distributions/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-NetInstall-1810.iso
-  sha256: 19d94274ef856c4dfcacb2e7cfe4be73e442a71dd65cc3fb6e46db826040b56e
-  template: templates/redhat.json.j2
+# centos7.6: # WIP
+#   vm_name: centos-7-6
+#   url: http://mirrors.usc.edu/pub/linux/distributions/centos/7.6.1810/isos/x86_64/CentOS-7-x86_64-NetInstall-1810.iso
+#   sha256: 19d94274ef856c4dfcacb2e7cfe4be73e442a71dd65cc3fb6e46db826040b56e
+#   template: templates/redhat.json.j2
 
 # Debian builds
 debian8.10:
@@ -33,11 +34,11 @@ debian9.5:
 
 debian9.6:  # current release
   vm_name: debian-9-6-stretch
-  url: http://mirrors.ocf.berkeley.edu/debian-cd/current/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
+  url: https://cdimage.debian.org/mirror/cdimage/archive/9.6.0/amd64/iso-cd/debian-9.6.0-amd64-netinst.iso
   md5: 0a5352e3568bc893a9f7b65192caf1e1
 
 # TODO - Need to fix templates/raid.json.j2, as raid build is currently broken
-debian9.6-raid:
-  _inherit: debian9.6
-  vm_name: debian-9-6-stretch-raid
-  template: templates/raid.json.j2
+# debian9.6-raid:
+#   _inherit: debian9.6
+#   vm_name: debian-9-6-stretch-raid
+#   template: templates/raid.json.j2

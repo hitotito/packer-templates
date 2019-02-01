@@ -17,6 +17,7 @@
       "ssh_port": "{{ ssh_port }}",
       "ssh_wait_timeout": "{{ ssh_wait_timeout }}",
       "shutdown_command": "echo '/sbin/halt -h -p' > /tmp/shutdown.sh; echo 'vagrant'|sudo -S sh '/tmp/shutdown.sh'",
+      "post_shutdown_delay": "{{ packer_post_shutdown_delay }}",
       "guest_additions_path": "VBoxGuestAdditions_{{ packer_virtualbox_version }}.iso",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
