@@ -37,7 +37,7 @@ def check_target(config, target):
         raise ConfigException(msg)
 
 def get_config(config_file_path):
-    return yaml.load(open(config_file_path, 'r').read())
+    return yaml.load(open(config_file_path, 'r').read(), Loader=yaml.FullLoader)
 
 def get_buildable_targets(config):
     return [key for key in config.keys() if key not in UNBUILDABLE_TARGET]
