@@ -3,10 +3,10 @@
 #        for each virtualbox version
 #apt-get -y install virtualbox-guest-utils
 sudo apt-get -y install wget make gcc
-wget https://download.virtualbox.org/virtualbox/6.0.4/VBoxGuestAdditions_6.0.4.iso
+wget https://download.virtualbox.org/virtualbox/6.0.12/VBoxGuestAdditions_6.0.12.iso
 sudo mkdir /media/VBoxGuestAdditions
-sudo mount -o loop,ro VBoxGuestAdditions_6.0.4.iso /media/VBoxGuestAdditions
+sudo mount -o loop,ro VBoxGuestAdditions_6.0.12.iso /media/VBoxGuestAdditions
 sudo sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run
-rm VBoxGuestAdditions_6.0.4.iso
+rm VBoxGuestAdditions_6.0.12.iso
 sudo umount -l /media/VBoxGuestAdditions
 sudo rmdir /media/VBoxGuestAdditions
