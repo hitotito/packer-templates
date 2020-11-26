@@ -1,8 +1,11 @@
 PACKER_CACHE_DIR=packer_cache
 PYTHON=python3
 
-all: clean
-	make build $(shell $(PYTHON) packer_helper.py list-targets)
+all:
+	@make _build_help
+
+setup:
+	pip3 install -r requirements.txt
 
 # If the first argument is "build"...
 ifeq (build,$(firstword $(MAKECMDGOALS)))
@@ -13,6 +16,7 @@ endif
 
 .PHONY: build
 build:
+	# TODO: if BUILD_ARGS is `all`, let's build all
 	@if [ "$(BUILD_ARGS)" = "" ] ; then \
 		make _build_help ; \
 	else \

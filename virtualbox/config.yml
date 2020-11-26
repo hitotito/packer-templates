@@ -52,6 +52,20 @@ debian9.11:
   url: https://cdimage.debian.org/mirror/cdimage/archive/9.11.0/amd64/iso-cd/debian-9.11.0-amd64-netinst.iso
   md5: f525f0c3f1c4ca184a604a75dabf4f71
 
+debian10.1:
+  vm_name: debian-10-1-buster
+  url: https://cdimage.debian.org/mirror/cdimage/archive/10.1.0/amd64/iso-cd/debian-10.1.0-amd64-netinst.iso
+  md5: b931ef8736c98704bcf519160b50fd83
+
+debian10.3:
+  vm_name: debian-10-3-buster
+  url: https://cdimage.debian.org/mirror/cdimage/archive/10.3.0/amd64/iso-cd/debian-10.3.0-amd64-netinst.iso
+  md5: 5956434be4b81e6376151b64ef9b1596
+
+debian10.6:
+  vm_name: debian-10-6-buster
+  url: https://cdimage.debian.org/mirror/cdimage/release/current/amd64/iso-cd/debian-10.6.0-amd64-netinst.iso
+  md5: 42c43392d108ed8957083843392c794b
 
 # TODO - Need to fix templates/raid.json.j2, as raid build is currently broken
 # debian9.6-raid:
